@@ -1,38 +1,268 @@
-.App {
-  text-align: center;
+body {
+  background-color: white; /* Set the background color to white */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.top-bar {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; /* Right align the items */
+  width: 100%;
+  height: 60px;
+  background-color: white; /* Set the background color to white */
+  padding: 0 20px;
+  gap: 10px; /* Adjust the spacing between items */
+}
+
+.logo {
+  width: 40px;
+  height: 50px;
+   /* Adjust the spacing between logo and title */
+}
+
+.title {
+  font-family: 'Merriweather-Regular', serif;
+  padding-top: 10px;
+  font-size: 40px;
+  margin-right: auto; /* Push the title to the left */
+}
+
+.bubble {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 116px;
+  height: 41px;
+  border-radius: 20px; /* Rounded corners */
+  margin-right: -10px; /* Move the bubbles to the left */
+}
+
+.home-bubble {
+  background-color: #336D74;
+  margin-right: 2px;
+}
+
+.bookmark-bubble, .categories-bubble, .my-trips-bubble {
+  background-color: white;
+  border: 2px solid #336D74;
+  margin-right: 2px;
+}
+
+.bubble-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+}
+
+.home-text {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.bookmark-text, .categories-text, .my-trips-text {
+  color: #336D74;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon {
+  width: 40px; /* Adjust the size of the icon */
+  height: 40px; /* Adjust the size of the icon */
+  margin-right: -30px; /* Move the icons to the left */
+}
+
+.settings-icon {
+  margin-right: -1px; /* Move the settings icon closer to the My Trips button */
+}
+
+.profile-icon {
+  margin-right: 60px; /* Move the profile icon closer to the settings icon */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 1250px;
+  height: 46px;
+  background-color: white;
+  border: 2px solid #336D74;
+  border-radius: 23px; /* Rounded corners */
+  margin: 10px auto; /* Move the search bar up by reducing the top margin */
+  margin-left: 30px;
+  padding-left: 20px; /* Add left padding */
+}
+
+.search-icon {
+  width: 24px; /* Adjust the size of the search icon */
+  height: 24px; /* Adjust the size of the search icon */
+  margin-right: 10px;
+}
+
+.search-text {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  color: #828282;
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  margin-top: 10px; /* Adjust the spacing between the search bar and tags */
+  gap: 10px; /* Space between tags */
+  padding-left: 30px; /* Align the tags with the search bar */
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13.5px; /* Rounded corners */
+  border: 1px solid #828282;
+  background-color: white;
+  padding: 0 10px;
+}
+
+.family-friendly-tag {
+  width: 126px;
+  height: 27px;
+}
+
+.food-tag {
+  width: 73px;
+  height: 27px;
+}
+
+.music-tag {
+  width: 71px;
+  height: 27px;
+}
+
+.add-filter-tag {
+  width: 97px;
+  height: 27px;
+  border: 1px solid #336D74;
+}
+
+.tag-text {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  color: #828282;
+}
+
+.add-filter-text {
+  color: #336D74;
+}
+
+.location {
+  padding-left: 30px; /* Align the location text with the search bar */
+  margin-top: 20px; /* Adjust the spacing between the tags and location text */
+}
+
+.location-text {
+  font-family: 'Merriweather', serif;
+  font-size: 30px;
+  color: #F06829;
+  font-weight: bold;
+}
+
+.section-titles {
+  display: flex;
+  align-items: center;
+  padding-left: 595px; /* Align the section titles with the specified position */
+  margin-top: -60px;
+}
+
+.tourism-travel-text {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  color: #336D74;
+  margin-right: 150px; /* Adjust the spacing between the two texts */
+}
+
+.local-finds-text {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  color: #828282;
+}
+
+.underline-bar {
+  display: flex;
+  align-items: center;
+  margin-top: 5px; /* Adjust the spacing between the texts and the underline bar */
+  padding-left: 585px; /* Align the underline bar with the specified position */
+}
+
+.underline-bar-left {
+  width: 160px;
+  height: 3px;
+  background-color: #336D74;
+}
+
+.underline-bar-right {
+  width: 489px;
+  height: 3px;
+  background-color: #828282;
+}
+
+.grid-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 20px; /* Adjust the spacing between the underline bar and the grid container */
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 290px);
+  grid-template-rows: repeat(2, 245px);
+  gap: 20px;
+  justify-content: start; /* Align the grid to the start (left) */
+  padding-left: 430px; /* Align the grid with the "Tourism Travel" text */
+}
+
+.grid-image {
+  width: 290px;
+  height: 245px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%; /* Position the arrows halfway down the grid */
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.left-arrow {
+  left: 580px; /* Adjust the position of the left arrow */
+  height: 30px;
+}
+
+.right-arrow {
+  right: 20px; /* Adjust the position of the right arrow */
+  height: 30px;
+  padding-right: 130px;
+}
+
+.loading-bar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Adjust the spacing between the image grid and the loading bar */
+  padding-left: 430px; /* Align the loading bar with the "Tourism Travel" text */
+}
+
+.loading-bar {
+  width: 60px; /* Adjust the size of the loading bar */
+  height: 13px; /* Adjust the size of the loading bar */
+}
+
+.map-container {
+  position: absolute;
+  top: 220px; /* Move the map image up */
+  left: 37px;
+}
+
+.map-image {
+  width: 498px;
+  height: 500px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
 }
