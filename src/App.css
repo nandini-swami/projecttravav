@@ -257,7 +257,7 @@ body {
 
 .map-container {
   position: absolute;
-  top: 220px; /* Move the map image up */
+  top: 250px; /* Move the map image up */
   left: 37px;
 }
 

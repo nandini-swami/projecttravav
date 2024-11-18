@@ -1,0 +1,95 @@
+.MyTripsPage {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.location-title, .date-range {
+    text-align: center;
+    margin: 10px 0;
+    font: Merriweather, serif;
+}
+
+.days-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.day-column {
+    width: 30%;
+}
+
+.trip-entry {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.trip-title {
+    font-weight: bold;
+}
+
+.trip-tags {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.tag {
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+.trip-rating {
+    margin-top: 5px;
+    color: #FFBB00; /* Yellow color for the stars */
+}
+
+.trip-time {
+    color: #F06829; /* Orange color for the time */
+}
+
+.see-all-button, .new-trip-button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.see-all-button:hover, .new-trip-button:hover {
+  background-color: #0056b3;
+}
+
+.date-editable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-icon {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.add-trip-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .fa-plus-circle {
+    cursor: pointer; /* Makes the icon clickable */
+  }
