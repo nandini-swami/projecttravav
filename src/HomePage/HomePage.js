@@ -13,11 +13,23 @@ import rightArrow from "../rightArrow.png";
 function HomePage() {
   // Individual state for each grid item's button
   const [addedPlans, setAddedPlans] = useState([]);
+  const [popupVisible, setPopupVisible] = useState(false); // Track popup visibility
+  const [currentPlan, setCurrentPlan] = useState(null);
 
   const handleAddToPlanClick = (index) => {
-    if (!addedPlans.includes(index)) {
-      setAddedPlans([...addedPlans, index]); // Add index to "added" state
+    setCurrentPlan(index); // Set the current item index
+    setPopupVisible(true);
+  };
+
+  const confirmAddToPlan = () => {
+    if (!addedPlans.includes(currentPlan)) {
+      setAddedPlans([...addedPlans, currentPlan]); // Mark the item as added
     }
+    setPopupVisible(false); // Close the popup
+  };
+
+  const closePopup = () => {
+    setPopupVisible(false); // Close the popup
   };
 
   const items = [
@@ -113,6 +125,33 @@ function HomePage() {
       <div className="map-container">
         <img src={mapImage} alt="Map" className="map-image" />
       </div>
+
+      {/* Popup */}
+      {popupVisible && (
+        <div className="popup-overlay">
+          <div className="popup">
+            <h3 className="popup-title">Confirm details for {items[currentPlan]?.title}</h3>
+            <div className="popup-body">
+              <label className="popup-label">Date:</label>
+              <input type="date" className="popup-input" />
+              <div className="time-select">
+                <label className="popup-label">From:</label>
+                <input type="time" className="popup-input" />
+                <label className="popup-label">To:</label>
+                <input type="time" className="popup-input" />
+              </div>
+            </div>
+            <div className="popup-actions">
+              <button className="popup-cancel-btn" onClick={closePopup}>
+                Cancel
+              </button>
+              <button className="popup-confirm-btn" onClick={confirmAddToPlan}>
+                Add to Chicago Trip
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
