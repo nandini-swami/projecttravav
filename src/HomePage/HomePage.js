@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
 import logo from '../logo.png'; // Assuming you have a logo image
 import settingsIcon from '../settingsIcon.png'; // Assuming you have a settings icon image
@@ -19,18 +20,18 @@ function HomePage() {
       <div className="top-bar">
         <img src={logo} alt="Logo" className="logo" />
         <span className="title">TravAv</span>
-        <div className="bubble home-bubble">
+        <Link to="/" className="bubble home-bubble">
           <span className="bubble-text home-text">Home</span>
-        </div>
-        <div className="bubble bookmark-bubble">
+        </Link>
+        <Link to="/bookmarkpage" className="bubble bookmark-bubble">
           <span className="bubble-text bookmark-text">Bookmarks</span>
-        </div>
+        </Link>
         <div className="bubble categories-bubble">
           <span className="bubble-text categories-text">Categories</span>
         </div>
-        <div className="bubble my-trips-bubble">
+        <Link to="/mytripspage" className="bubble my-trips-bubble">
           <span className="bubble-text my-trips-text">My Trips</span>
-        </div>
+        </Link>
         <img src={settingsIcon} alt="Settings" className="icon settings-icon" />
         <img src={profileIcon} alt="Profile" className="icon profile-icon" />
       </div>
@@ -66,13 +67,13 @@ function HomePage() {
       <div className="grid-container">
         <img src={leftArrow} alt="Left Arrow" className="arrow left-arrow" />
         <div className="image-grid">
-            <img src={image1} alt="Image 1" className="grid-image" />
-            <img src={image2} alt="Image 2" className="grid-image" />
-            <img src={image3} alt="Image 3" className="grid-image" />
-            <img src={image4} alt="Image 4" className="grid-image" />
+          <img src={image1} alt="Image 1" className="grid-image" />
+          <img src={image1} alt="Image 2" className="grid-image" />
+          <img src={image1} alt="Image 3" className="grid-image" />
+          <img src={image1} alt="Image 4" className="grid-image" />
         </div>
         <img src={rightArrow} alt="Right Arrow" className="arrow right-arrow" />
-    </div>
+      </div>
       <div className="loading-bar-container">
         <img src={loadingBar} alt="Loading Bar" className="loading-bar" />
       </div>
