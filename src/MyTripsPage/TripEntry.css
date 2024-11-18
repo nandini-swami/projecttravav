@@ -49,3 +49,32 @@
     cursor: pointer; 
     color: #828282; 
   }
+
+  .mytripspage-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Aligns children on both ends */
+    padding: 0 20px; /* Adds padding on both sides */
+  }
+  
+  .mytripspage-text {
+    font-family: 'Merriweather', serif;
+    font-size: 45px;
+    font-weight: bold;
+    color: #F06829; /* Example color, adjust as needed */
+  }
+  
+  .see-all-button, .new-trip-button {
+    padding: 8px 16px;
+    margin-right: 10px; /* Adjusts spacing to the right */
+    background-color: #F06829;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .see-all-button:hover, .new-trip-button:hover {
+    background-color: #e55724;
+  }

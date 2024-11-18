@@ -82,8 +82,12 @@ function MyTripsPage() {
         <img src={settingsIcon} alt="Settings" className="icon settings-icon" />
         <img src={profileIcon} alt="Profile" className="icon profile-icon" />
       </div>
-      <div className="bookmark-title">
-        <span className="bookmark-page-text">Bookmarks</span>
+      <div className="mytripspage-title">
+        <span className="mytripspage-text">My Trips</span>
+        <div>
+          <button className="see-all-button">See All</button>
+          <button className="new-trip-button">New Trip</button>
+        </div>
       </div>
       <div className="trip-header">
         <h1 className="location-title">Chicago</h1>
