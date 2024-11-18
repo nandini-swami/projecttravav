@@ -1,22 +1,35 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../App.css';
-import logo from '../logo.png'; // Assuming you have a logo image
-import settingsIcon from '../settingsIcon.png'; // Assuming you have a settings icon image
-import profileIcon from '../profileIcon.png'; // Assuming you have a profile icon image
-import searchIcon from '../searchIcon.png'; // Assuming you have a search icon image
-import mapImage from '../mapImage.png'; // Assuming you have a map image
-import image1 from '../image1.png'; // Assuming you have an image
-import image2 from '../image1.png'; // Assuming you have an image
-import image3 from '../image1.png'; // Assuming you have an image
-import image4 from '../image1.png'; // Assuming you have an image
-import loadingBar from '../loadingBar.png'; // Assuming you have a loading bar image
-import leftArrow from '../leftArrow.png'; // Assuming you have a left arrow image
-import rightArrow from '../rightArrow.png'; // Assuming you have a right arrow image
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "../App.css";
+import logo from "../logo.png";
+import settingsIcon from "../settingsIcon.png";
+import profileIcon from "../profileIcon.png";
+import searchIcon from "../searchIcon.png";
+import mapImage from "../mapImage.png";
+import image1 from "../image1.png"; // Example image for grid items
+import leftArrow from "../leftArrow.png";
+import rightArrow from "../rightArrow.png";
 
 function HomePage() {
+  // Individual state for each grid item's button
+  const [addedPlans, setAddedPlans] = useState([]);
+
+  const handleAddToPlanClick = (index) => {
+    if (!addedPlans.includes(index)) {
+      setAddedPlans([...addedPlans, index]); // Add index to "added" state
+    }
+  };
+
+  const items = [
+    { id: 0, title: "The Secret Mermaid", image: image1 },
+    { id: 1, title: "Another Cool Spot", image: image1 },
+    { id: 2, title: "Hidden Gem", image: image1 },
+    { id: 3, title: "Must-Visit Place", image: image1 },
+  ];
+
   return (
     <div className="HomePage">
+      {/* Top Bar */}
       <div className="top-bar">
         <img src={logo} alt="Logo" className="logo" />
         <span className="title">TravAv</span>
@@ -35,10 +48,14 @@ function HomePage() {
         <img src={settingsIcon} alt="Settings" className="icon settings-icon" />
         <img src={profileIcon} alt="Profile" className="icon profile-icon" />
       </div>
+
+      {/* Search Bar */}
       <div className="search-bar">
         <img src={searchIcon} alt="Search" className="search-icon" />
         <span className="search-text">Search location, activity, restaurant, tags, etc...</span>
       </div>
+
+      {/* Tags */}
       <div className="tags">
         <div className="tag family-friendly-tag">
           <span className="tag-text">family friendly X</span>
@@ -53,6 +70,8 @@ function HomePage() {
           <span className="tag-text add-filter-text">add filter</span>
         </div>
       </div>
+
+      {/* Location and Sections */}
       <div className="location">
         <span className="location-text">Chicago</span>
       </div>
@@ -64,23 +83,36 @@ function HomePage() {
         <div className="underline-bar-left"></div>
         <div className="underline-bar-right"></div>
       </div>
+
+      {/* Grid Container */}
       <div className="grid-container">
         <img src={leftArrow} alt="Left Arrow" className="arrow left-arrow" />
         <div className="image-grid">
-          <img src={image1} alt="Image 1" className="grid-image" />
-          <img src={image1} alt="Image 2" className="grid-image" />
-          <img src={image1} alt="Image 3" className="grid-image" />
-          <img src={image1} alt="Image 4" className="grid-image" />
+          {items.map((item, index) => (
+            <div
+              key={index}
+              className="grid-item"
+              onMouseEnter={(e) => e.currentTarget.classList.add("hover")}
+              onMouseLeave={(e) => e.currentTarget.classList.remove("hover")}
+            >
+              <img src={item.image} alt={item.title} className="grid-image" />
+                <button
+                  className={`add-to-plan-btn ${
+                    addedPlans.includes(index) ? "added" : ""
+                  }`}
+                  onClick={() => handleAddToPlanClick(index)}
+                >
+                  {addedPlans.includes(index) ? "Added" : "Add to Plan"}
+                </button>
+            </div>
+          ))}
         </div>
         <img src={rightArrow} alt="Right Arrow" className="arrow right-arrow" />
       </div>
-      <div className="loading-bar-container">
-        <img src={loadingBar} alt="Loading Bar" className="loading-bar" />
-      </div>
+
       <div className="map-container">
         <img src={mapImage} alt="Map" className="map-image" />
       </div>
-      {/* Add more content here */}
     </div>
   );
 }
