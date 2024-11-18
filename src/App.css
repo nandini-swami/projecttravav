@@ -266,3 +266,97 @@ body {
   height: 500px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
 }
+
+
+/*(above is homepage styling/nav bar styling)
+
+BOOKMARK PAGE STYLING:
+*/
+
+
+.bookmark-title {
+  padding-left: 30px; /* Align the title with the logo */
+  margin-top: 20px; /* Adjust the spacing between the top bar and the title */
+}
+
+.bookmark-page-text {
+  font-family: 'Merriweather', serif;
+  font-size: 45px;
+  color: #F06829;
+  font-weight: bold;
+}
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px; /* Adjust the spacing between the title and the search bar */
+  padding-left: 30px; /* Align the search bar with the title */
+}
+
+.search-bar-bookmark {
+  display: flex;
+  align-items: center;
+  width: 1050px; /* Make the search bar shorter */
+  height: 46px;
+  background-color: white;
+  border: 2px solid #336D74;
+  border-radius: 23px; /* Rounded corners */
+  padding-left: 20px; /* Add left padding */
+}
+
+.search-text {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  color: #828282;
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 199px;
+  height: 47px;
+  background-color: #336D74;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  border: none;
+  border-radius: 23.5px; /* Rounded corners */
+  margin-left: 20px; /* Space between the search bar and the button */
+  cursor: pointer;
+}
+
+/*
+My Trips PAGE STYLING:
+*/
+
+.mytripspage-title {
+  padding-left: 30px; /* Align the title with the logo */
+  margin-top: 20px; /* Adjust the spacing between the top bar and the title */
+}
+
+.mytripspage-text {
+  font-family: 'Merriweather', serif;
+  font-size: 45px;
+  color: #F06829;
+  font-weight: bold;
+}
+
+.trip-section {
+  padding-left: 30px; /* Align the trip sections with the title */
+  margin-top: 20px; /* Adjust the spacing between the sections */
+}
+
+.trip-location-text {
+  font-family: 'Merriweather', serif;
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+}
+
+.trip-image {
+  width: 100%; /* Make the image take the full width of the container */
+  height: 240px; /* Maintain the aspect ratio */
+  margin-top: 10px; /* Adjust the spacing between the text and the image */
+}
+
