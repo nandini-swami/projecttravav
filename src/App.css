@@ -25,6 +25,7 @@ body {
 .title {
   font-family: 'Merriweather-Regular', serif;
   padding-top: 10px;
+  padding-left: 10px;
   font-size: 40px;
   margin-right: auto; /* Push the title to the left */
 }
