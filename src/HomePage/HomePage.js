@@ -48,12 +48,12 @@ function HomePage() {
         <Link to="/" className="bubble home-bubble">
           <span className="bubble-text home-text">Home</span>
         </Link>
-        <Link to="/bookmarkpage" className="bubble bookmark-bubble">
-          <span className="bubble-text bookmark-text">Bookmarks</span>
-        </Link>
         <div className="bubble categories-bubble">
           <span className="bubble-text categories-text">Categories</span>
         </div>
+        <Link to="/bookmarkpage" className="bubble bookmark-bubble">
+          <span className="bubble-text bookmark-text">Bookmarks</span>
+        </Link>
         <Link to="/mytripspage" className="bubble my-trips-bubble">
           <span className="bubble-text my-trips-text">My Trips</span>
         </Link>
