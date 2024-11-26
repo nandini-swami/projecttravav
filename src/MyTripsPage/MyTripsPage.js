@@ -13,7 +13,7 @@ import { FaPlusCircle } from 'react-icons/fa';
 function MyTripsPage() {
   const trips = [
     {
-      day: "Saturday October 13th",
+      day: "Sunday October 13th",
       entries: [
         {
           time: "11:00 AM - 2:00 PM",
@@ -25,7 +25,7 @@ function MyTripsPage() {
       ]
     },
     {
-      day: "Sunday October 14th",
+      day: "Monday October 14th",
       entries: [
         {
           time: "2:00 PM - 4:00 PM",
@@ -43,7 +43,7 @@ function MyTripsPage() {
       ]
     },
     {
-      day: "Monday October 15th",
+      day: "Tuesday October 15th",
       entries: [
         {
           time: "7:00 AM - 9:00 AM",
