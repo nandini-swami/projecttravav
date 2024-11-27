@@ -16,6 +16,9 @@ function MyTripsPage() {
             <span className="title">TravAv</span>
           </div>
         </div>
+        <Link to="/" className="bubble home-bubble">
+          <span className="bubble-text home-text">Home</span>
+        </Link>
         <div className="bubble categories-bubble">
           <span className="bubble-text categories-text">Categories</span>
         </div>
