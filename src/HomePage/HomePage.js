@@ -42,9 +42,13 @@ function HomePage() {
   return (
     <div className="HomePage">
       {/* Top Bar */}
-      <div className="top-bar">
-        <img src={logo} alt="Logo" className="logo" />
-        <span className="title">TravAv</span>
+      <div className="top-bar" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+        <div className="top-left" style={{ display: 'flex', alignItems: 'center', marginRight: 'auto' }}>
+          <div className="invisible-button" onClick={() => window.location.href = "/"} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}> 
+            <img src={logo} alt="Logo" className="logo" />
+            <span className="title">TravAv</span>
+          </div>
+        </div>
         <Link to="/" className="bubble home-bubble">
           <span className="bubble-text home-text">Home</span>
         </Link>
@@ -108,14 +112,14 @@ function HomePage() {
               onMouseLeave={(e) => e.currentTarget.classList.remove("hover")}
             >
               <img src={item.image} alt={item.title} className="grid-image" />
-                <button
-                  className={`add-to-plan-btn ${
-                    addedPlans.includes(index) ? "added" : ""
-                  }`}
-                  onClick={() => handleAddToPlanClick(index)}
-                >
-                  {addedPlans.includes(index) ? "Added" : "Add to Plan"}
-                </button>
+              <button
+                className={`add-to-plan-btn ${
+                  addedPlans.includes(index) ? "added" : ""
+                }`}
+                onClick={() => handleAddToPlanClick(index)}
+              >
+                {addedPlans.includes(index) ? "Added" : "Add to Plan"}
+              </button>
             </div>
           ))}
         </div>

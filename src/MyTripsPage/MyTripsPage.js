@@ -64,9 +64,13 @@ function MyTripsPage() {
 
   return (
     <div className="MyTripsPage">
-      <div className="top-bar">
-        <img src={logo} alt="Logo" className="logo" />
-        <span className="title">TravAv</span>
+      <div className="top-bar" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+        <div className="top-left" style={{ display: 'flex', alignItems: 'center', marginRight: 'auto' }}>
+          <div className="invisible-button" onClick={() => window.location.href = "/"} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}> 
+            <img src={logo} alt="Logo" className="logo" />
+            <span className="title">TravAv</span>
+          </div>
+        </div>
         <Link to="/" className="bubble home-bubble">
           <span className="bubble-text home-text">Home</span>
         </Link>
@@ -82,6 +86,7 @@ function MyTripsPage() {
         <img src={settingsIcon} alt="Settings" className="icon settings-icon" />
         <img src={profileIcon} alt="Profile" className="icon profile-icon" />
       </div>
+
       <div className="mytripspage-title">
         <span className="mytripspage-text">My Trips</span>
         <div>
