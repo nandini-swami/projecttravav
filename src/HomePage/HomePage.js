@@ -6,6 +6,7 @@ import image1 from "../image1.png"; // Example image for grid items
 import leftArrow from "../leftArrow.png";
 import rightArrow from "../rightArrow.png";
 import NavBar from "../components/NavBar";
+import SearchBar from "../components/SearchBar";
 
 function HomePage() {
   const [addedPlans, setAddedPlans] = useState([]);
@@ -38,23 +39,7 @@ function HomePage() {
   return (
     <div className="HomePage">
       <NavBar /> 
-      <div className="search-bar">
-        <span className="search-text">Search location, activity, restaurant, tags, etc...</span>
-      </div>
-      <div className="tags">
-        <div className="tag family-friendly-tag">
-          <span className="tag-text">family friendly X</span>
-        </div>
-        <div className="tag food-tag">
-          <span className="tag-text">food X</span>
-        </div>
-        <div className="tag music-tag">
-          <span className="tag-text">music X</span>
-        </div>
-        <div className="tag add-filter-tag">
-          <span className="tag-text add-filter-text">add filter</span>
-        </div>
-      </div>
+      <SearchBar />
       <div className="location">
         <span className="location-text">Chicago</span>
       </div>

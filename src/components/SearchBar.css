@@ -1,0 +1,75 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 1250px;
+    height: 46px;
+    background-color: white;
+    border: 2px solid #336D74;
+    border-radius: 23px; /* Rounded corners */
+    margin: 10px auto; /* Move the search bar up by reducing the top margin */
+    margin-left: 30px;
+    padding-left: 20px; /* Add left padding */
+  }
+  
+  .search-icon {
+    width: 24px; /* Adjust the size of the search icon */
+    height: 24px; /* Adjust the size of the search icon */
+    margin-right: 10px;
+  }
+  
+  .search-text {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    color: #828282;
+  }
+  
+  /* Tags Styling */
+  .tags {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Adjust the spacing between the search bar and tags */
+    gap: 10px; /* Space between tags */
+    padding-left: 30px; /* Align the tags with the search bar */
+  }
+  
+  .tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13.5px; /* Rounded corners */
+    border: 1px solid #828282;
+    background-color: white;
+    padding: 0 10px;
+  }
+  
+  .family-friendly-tag {
+    width: 126px;
+    height: 27px;
+  }
+  
+  .food-tag {
+    width: 73px;
+    height: 27px;
+  }
+  
+  .music-tag {
+    width: 71px;
+    height: 27px;
+  }
+  
+  .add-filter-tag {
+    width: 97px;
+    height: 27px;
+    border: 1px solid #336D74;
+  }
+  
+  .tag-text {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    color: #828282;
+  }
+  
+  .add-filter-text {
+    color: #336D74;
+  }
+  
