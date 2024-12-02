@@ -68,7 +68,6 @@ function HomePage() {
           {items.map((item, index) => (
             <div key={index} className="grid-item">
               <img src={item.image} alt={item.title} className="grid-image" />
-<<<<<<< Updated upstream
               <button
                 className={`add-to-plan-btn ${
                   addedPlans.includes(index) ? "added" : ""
@@ -77,16 +76,7 @@ function HomePage() {
               >
                 {addedPlans.includes(index) ? "Added" : "Add to Plan"}
               </button>
-=======
-                <button
-                  className={`add-to-plan-btn ${
-                    addedPlans.includes(index) ? "added" : ""
-                  }`}
-                  onClick={() => handleAddToPlanClick(index)}
-                >
-                  {addedPlans.includes(index) ? "Added" : "Add to Plan"}
-                </button>
->>>>>>> Stashed changes
+
             </div>
           ))}
         </div>
