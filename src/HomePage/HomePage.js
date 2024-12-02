@@ -9,6 +9,7 @@ import NavBar from "../components/NavBar";
 import LocationCard from '/Users/nandiniswami/Desktop/weather-app/projecttravav/src/components/LocationCard.js'; 
 import tourismData from '/Users/nandiniswami/Desktop/weather-app/projecttravav/src/Data/tourismData.json';
 import "../HomePage/HomePage.css";
+import SearchBar from "../components/SearchBar";
 
 function HomePage() {
   const [addedPlans, setAddedPlans] = useState([]);
@@ -36,23 +37,7 @@ function HomePage() {
   return (
       <div className="HomePage">
         <NavBar /> 
-        <div className="search-bar">
-          <span className="search-text">Search location, activity, restaurant, tags, etc...</span>
-        </div>
-        <div className="tags">
-          <div className="tag family-friendly-tag">
-            <span className="tag-text">family friendly X</span>
-          </div>
-          <div className="tag food-tag">
-            <span className="tag-text">food X</span>
-          </div>
-          <div className="tag music-tag">
-            <span className="tag-text">music X</span>
-          </div>
-          <div className="tag add-filter-tag">
-            <span className="tag-text add-filter-text">add filter</span>
-          </div>
-        </div>
+        <SearchBar />
         <div className="location">
           <span className="location-text">Chicago</span>
         </div>
@@ -112,6 +97,67 @@ function HomePage() {
         )}
       </div>
     );
+    <div className="HomePage">
+      <NavBar /> 
+      <SearchBar />
+      <div className="location">
+        <span className="location-text">Chicago</span>
+      </div>
+      <div className="section-titles">
+        <span className="tourism-travel-text">Tourism Travel</span>
+        <span className="local-finds-text">Local Finds</span>
+      </div>
+      <div className="grid-container">
+        <img src={leftArrow} alt="Left Arrow" className="arrow left-arrow" />
+        <div className="image-grid">
+          {items.map((item, index) => (
+            <div key={index} className="grid-item">
+              <img src={item.image} alt={item.title} className="grid-image" />
+              <button
+                className={`add-to-plan-btn ${
+                  addedPlans.includes(index) ? "added" : ""
+                }`}
+                onClick={() => handleAddToPlanClick(index)}
+              >
+                {addedPlans.includes(index) ? "Added" : "Add to Plan"}
+              </button>
+            </div>
+          ))}
+        </div>
+        <img src={rightArrow} alt="Right Arrow" className="arrow right-arrow" />
+      </div>
+      <div className="map-container">
+        <img src={mapImage} alt="Map" className="map-image" />
+      </div>
+      {popupVisible && (
+        <div className="popup-overlay">
+          <div className="popup">
+            <h3 className="popup-title">
+              Confirm details for {items[currentPlan]?.title}
+            </h3>
+            <div className="popup-body">
+              <label className="popup-label">Date:</label>
+              <input type="date" className="popup-input" />
+              <div className="time-select">
+                <label className="popup-label">From:</label>
+                <input type="time" className="popup-input" />
+                <label className="popup-label">To:</label>
+                <input type="time" className="popup-input" />
+              </div>
+            </div>
+            <div className="popup-actions">
+              <button className="popup-cancel-btn" onClick={closePopup}>
+                Cancel
+              </button>
+              <button className="popup-confirm-btn" onClick={confirmAddToPlan}>
+                Add to Chicago Trip
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default HomePage;
