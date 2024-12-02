@@ -15,12 +15,11 @@ body {
   padding: 0 20px;
   gap: 10px; /* Adjust the spacing between items */
 }
-
+/* 
 .logo {
   width: 40px;
   height: 50px;
-   /* Adjust the spacing between logo and title */
-}
+} */
 
 .title {
   font-family: 'Merriweather-Regular', serif;

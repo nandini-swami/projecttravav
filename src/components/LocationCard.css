@@ -1,54 +1,65 @@
 .location-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .location-name {
-    font-size: 18px;
-    color: #333;
-  }
-  
-  .location-description {
-    font-size: 16px;
-    color: #666;
-    margin-top: 5px;
-  }
-  
-  .location-tags {
-    margin-top: 10px;
-  }
-  
-  .tag {
-    display: inline-block;
-    background-color: #eee;
-    padding: 5px;
-    border-radius: 5px;
-    margin-right: 5px;
-  }
-  
-  .location-info {
-    margin-top: 10px;
-  }
-  
-  .location-address, .location-contact {
-    font-size: 14px;
-    color: #555;
-  }
-  
-  .location-website {
-    display: block;
-    color: #007BFF;
-    margin-top: 5px;
-    text-decoration: none;
-  }
-  
-  .location-rating {
-    font-size: 18px;
-    margin-top: 10px;
-    color: #FFD700;
-  }
-  
+  border: 1px solid #ccc;
+  padding: 15px; /* Increased padding for better spacing */
+  padding-top: 0px;
+  margin-bottom: 20px; /* More space between cards */
+  background-color: #fff; /* Lighter background for better readability */
+  border-radius: 8px; /* Slightly larger radius for a softer look */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Slightly darker shadow for depth */
+  font-family: 'Noto Sans'; /* Ensuring consistent font usage */
+}
+
+.location-name {
+  font-size: 20px; /* Larger font size for emphasis */
+  color: #333;
+}
+
+.location-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px; /* More separation from tags */
+}
+
+.location-tags {
+  display: flex;        /* Align tags in a row */
+  overflow-x: auto;     /* Enable horizontal scrolling */
+  white-space: nowrap;  /* Prevent wrapping of contents */
+  gap: 5px;             /* Space between tags */
+  padding: 5px 10px;   
+  padding-left: 0px;
+  padding-bottom: 0px;
+  scrollbar-width: thin;        /* Optional: for thinner scrollbars */
+  scrollbar-color: #888 #f0f0f0; /* Optional: custom colors for the scrollbar */
+}
+
+.tag {
+  flex-shrink: 0;       
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  font-size: 8px;
+  color: #333;
+}
+
+
+.location-info {
+  margin-top: 2px;
+  line-height: 1.6; 
+}
+
+.location-address, .location-contact {
+  font-size: 14px;
+  color: #555;
+}
+
+.location-website {
+  display: inline-block; /* Aligns better within flow */
+  color: #007BFF;
+  margin-top: 5px;
+  text-decoration: none;
+  font-weight: bold; /* Makes the link stand out more */
+}
+
+.location-rating {
+  font-size: 18px;
+  color: #FFD700; /* Gold color for the stars */
+}

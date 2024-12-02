@@ -8,6 +8,7 @@ import rightArrow from "../rightArrow.png";
 import NavBar from "../components/NavBar";
 import LocationCard from '/Users/nandiniswami/Desktop/weather-app/projecttravav/src/components/LocationCard.js'; 
 import tourismData from '/Users/nandiniswami/Desktop/weather-app/projecttravav/src/Data/tourismData.json';
+import "../HomePage/HomePage.css";
 
 function HomePage() {
   const [addedPlans, setAddedPlans] = useState([]);
@@ -59,12 +60,13 @@ function HomePage() {
           <span className="tourism-travel-text">Tourism Travel</span>
           <span className="local-finds-text">Local Finds</span>
         </div>
+        
         <div className="grid-container">
           <img src={leftArrow} alt="Left Arrow" className="arrow left-arrow" />
           <div className="image-grid">
-            {items.map((item, index) => (
+            {items.map((location, index) => (
               <div key={index} className="grid-item">
-                <img src={item.image} alt={item.title} className="grid-image" />
+                <LocationCard key={index} location={location} />
                 <button
                   className={`add-to-plan-btn ${
                     addedPlans.includes(index) ? "added" : ""
