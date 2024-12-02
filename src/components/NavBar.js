@@ -16,6 +16,8 @@ function NavBar() {
     { path: "/mytripspage", label: "My Trips" },
   ];
 
+  const isHomeActive = location.pathname === "/" || location.pathname === "/homelocalfinds";
+
   return (
     <div
       className="top-bar"
@@ -52,7 +54,7 @@ function NavBar() {
           key={link.path}
           to={link.path}
           className={`bubble ${
-            location.pathname === link.path
+            (link.path === "/" && isHomeActive) || location.pathname === link.path
               ? "clicked-page-button" // Highlighted style for the active page
               : "non-clicked-page-button" // Default style for other pages
           }`}

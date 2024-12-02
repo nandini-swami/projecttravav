@@ -8,7 +8,7 @@ import rightArrow from "../rightArrow.png";
 import NavBar from "../components/NavBar";
 import { useNavigate } from 'react-router-dom';
 
-function HomePage() {
+function HomeLocalFindsPage() {
   const [addedPlans, setAddedPlans] = useState([]);
   const [popupVisible, setPopupVisible] = useState(false);
   const [currentPlan, setCurrentPlan] = useState(null);
@@ -39,11 +39,12 @@ function HomePage() {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate('/homelocalfinds');
+    navigate('/');
   };
 
+
   return (
-    <div className="HomePage">
+    <div className="HomeLocalFindsPage">
       <NavBar /> 
       <div className="search-bar">
         <span className="search-text">Search location, activity, restaurant, tags, etc...</span>
@@ -66,12 +67,12 @@ function HomePage() {
         <span className="location-text">Chicago</span>
       </div>
       <div className="section-titles">
-        <span className="tourism-travel-text" >Tourism Travel</span>
-        <span className="local-finds-text"onClick={handleNavigate}>Local Finds</span>
+        <span className="tourism-travel-text-local" onClick={handleNavigate}>Tourism Travel</span>
+        <span className="local-finds-text-local">Local Finds</span>
       </div>
       <div className="underline-bar">
-        <div className="underline-bar-left"></div>
-        <div className="underline-bar-right"></div>
+        <div className="underline-bar-left-local"></div>
+        <div className="underline-bar-right-local"></div>
       </div>
       <div className="grid-container">
         <img src={leftArrow} alt="Left Arrow" className="arrow left-arrow" />
@@ -127,4 +128,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default HomeLocalFindsPage;
