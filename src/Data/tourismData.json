@@ -1,0 +1,61 @@
+{
+    "Chicago": [
+      {
+        "name": "Navy Pier",
+        "description": "Navy Pier is the People's Pier, Chicago's lakefront treasure, welcoming all and offering dynamic and eclectic experiences through partnerships...",
+        "tags": ["family friendly", "music", "food", "pet friendly"],
+        "address": "600 E Grand Ave, Chicago, IL 60611",
+        "contact": "+1 312-595-7437",
+        "website": "navypier.org",
+        "rating": "★★★★☆"
+      },
+      {
+        "name": "Navy Pier",
+        "description": "Navy Pier is the People's Pier, Chicago's lakefront treasure, welcoming all and offering dynamic and eclectic experiences through partnerships...",
+        "tags": ["family friendly", "music", "food", "pet friendly"],
+        "address": "600 E Grand Ave, Chicago, IL 60611",
+        "contact": "+1 312-595-7437",
+        "website": "navypier.org",
+        "rating": "★★★★☆"
+      },
+      {
+        "name": "Navy Pier",
+        "description": "Navy Pier is the People's Pier, Chicago's lakefront treasure, welcoming all and offering dynamic and eclectic experiences through partnerships...",
+        "tags": ["family friendly", "music", "food", "pet friendly"],
+        "address": "600 E Grand Ave, Chicago, IL 60611",
+        "contact": "+1 312-595-7437",
+        "website": "navypier.org",
+        "rating": "★★★★☆"
+      },
+      {
+        "name": "Navy Pier",
+        "description": "Navy Pier is the People's Pier, Chicago's lakefront treasure, welcoming all and offering dynamic and eclectic experiences through partnerships...",
+        "tags": ["family friendly", "music", "food", "pet friendly"],
+        "address": "600 E Grand Ave, Chicago, IL 60611",
+        "contact": "+1 312-595-7437",
+        "website": "navypier.org",
+        "rating": "★★★★☆"
+      }
+    ],
+    "New York": [
+      {
+        "name": "Central Park",
+        "description": "Central Park is the green heart of New York City, offering a peaceful mixture of lakes, forests, and trails. It's a hub for outdoor activities, culture, and relaxation.",
+        "tags": ["outdoors", "picnic", "sightseeing", "family friendly"],
+        "address": "New York, NY 10024",
+        "contact": "+1 212-310-6600",
+        "website": "centralparknyc.org",
+        "rating": "★★★★★"
+      },
+      {
+        "name": "New York Catacombs by Candlelight",
+        "description": "Go behind-the-scenes and deep underground at the Basilica of St. Patrick’s Old Cathedral, with the only Catholic catacombs in New York City. See parts of the church that are otherwise off-limits to visitors.",
+        "tags": ["tour", "history", "spiritual", "wheelchair accessible"],
+        "address": "266 Mulberry St, New York, NY 10012, USA",
+        "contact": "+1 (212) 300-7683",
+        "website": "https://takeawalk.com/#catacombs-by-candlelight-tour",
+        "rating": "★★★☆☆"  
+      }
+    ]
+  }
+  
