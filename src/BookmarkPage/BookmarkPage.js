@@ -10,6 +10,7 @@ import longImage from '../longImage.png';
 function BookmarkPage() {
   return (
     <div className="BookmarkPage">
+<<<<<<< Updated upstream
       <div className="top-bar" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
         <div className="top-left" style={{ display: 'flex', alignItems: 'center', marginRight: 'auto' }}>
           <div className="invisible-button" onClick={() => window.location.href = "/"} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}> 

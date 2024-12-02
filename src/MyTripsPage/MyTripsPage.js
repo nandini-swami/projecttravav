@@ -31,6 +31,7 @@ function MyTripsPage() {
         <img src={settingsIcon} alt="Settings" className="icon settings-icon" />
         <img src={profileIcon} alt="Profile" className="icon profile-icon" />
       </div>
+<<<<<<< Updated upstream
 
       <div className="mytripspage-title">
         <span className="mytripspage-text">My Trips</span>
