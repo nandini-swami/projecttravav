@@ -1,35 +1,31 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
-import logo from "../logo.png";
-import settingsIcon from "../settingsIcon.png";
-import profileIcon from "../profileIcon.png";
-import searchIcon from "../searchIcon.png";
 import mapImage from "../mapImage.png";
 import image1 from "../image1.png"; // Example image for grid items
 import leftArrow from "../leftArrow.png";
 import rightArrow from "../rightArrow.png";
+import NavBar from "../components/NavBar";
 
 function HomePage() {
-  // Individual state for each grid item's button
   const [addedPlans, setAddedPlans] = useState([]);
-  const [popupVisible, setPopupVisible] = useState(false); // Track popup visibility
+  const [popupVisible, setPopupVisible] = useState(false);
   const [currentPlan, setCurrentPlan] = useState(null);
 
   const handleAddToPlanClick = (index) => {
-    setCurrentPlan(index); // Set the current item index
+    setCurrentPlan(index);
     setPopupVisible(true);
   };
 
   const confirmAddToPlan = () => {
     if (!addedPlans.includes(currentPlan)) {
-      setAddedPlans([...addedPlans, currentPlan]); // Mark the item as added
+      setAddedPlans([...addedPlans, currentPlan]);
     }
-    setPopupVisible(false); // Close the popup
+    setPopupVisible(false);
   };
 
   const closePopup = () => {
-    setPopupVisible(false); // Close the popup
+    setPopupVisible(false);
   };
 
   const items = [
@@ -41,52 +37,10 @@ function HomePage() {
 
   return (
     <div className="HomePage">
-      {/* Top Bar */}
-<<<<<<< Updated upstream
-      <div className="top-bar" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-        <div className="top-left" style={{ display: 'flex', alignItems: 'center', marginRight: 'auto' }}>
-          <div className="invisible-button" onClick={() => window.location.href = "/"} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}> 
-            <img src={logo} alt="Logo" className="logo" />
-            <span className="title">TravAv</span>
-          </div>
-        </div>
-        <Link to="/" className="bubble home-bubble">
-          <span className="bubble-text home-text">Home</span>
-        </Link>
-        <div className="bubble categories-bubble">
-          <span className="bubble-text categories-text">Categories</span>
-        </div>
-        <Link to="/bookmarkpage" className="bubble bookmark-bubble">
-          <span className="bubble-text bookmark-text">Bookmarks</span>
-        </Link>
-=======
-      <div className="top-bar">
-        <img src={logo} alt="Logo" className="logo" />
-        <span className="title">TravAv</span>
-        <Link to="/" className="bubble home-bubble">
-          <span className="bubble-text home-text">Home</span>
-        </Link>
-        <Link to="/bookmarkpage" className="bubble bookmark-bubble">
-          <span className="bubble-text bookmark-text">Bookmarks</span>
-        </Link>
-        <div className="bubble categories-bubble">
-          <span className="bubble-text categories-text">Categories</span>
-        </div>
->>>>>>> Stashed changes
-        <Link to="/mytripspage" className="bubble my-trips-bubble">
-          <span className="bubble-text my-trips-text">My Trips</span>
-        </Link>
-        <img src={settingsIcon} alt="Settings" className="icon settings-icon" />
-        <img src={profileIcon} alt="Profile" className="icon profile-icon" />
-      </div>
-
-      {/* Search Bar */}
+      <NavBar /> 
       <div className="search-bar">
-        <img src={searchIcon} alt="Search" className="search-icon" />
         <span className="search-text">Search location, activity, restaurant, tags, etc...</span>
       </div>
-
-      {/* Tags */}
       <div className="tags">
         <div className="tag family-friendly-tag">
           <span className="tag-text">family friendly X</span>
@@ -101,8 +55,6 @@ function HomePage() {
           <span className="tag-text add-filter-text">add filter</span>
         </div>
       </div>
-
-      {/* Location and Sections */}
       <div className="location">
         <span className="location-text">Chicago</span>
       </div>
@@ -110,22 +62,11 @@ function HomePage() {
         <span className="tourism-travel-text">Tourism Travel</span>
         <span className="local-finds-text">Local Finds</span>
       </div>
-      <div className="underline-bar">
-        <div className="underline-bar-left"></div>
-        <div className="underline-bar-right"></div>
-      </div>
-
-      {/* Grid Container */}
       <div className="grid-container">
         <img src={leftArrow} alt="Left Arrow" className="arrow left-arrow" />
         <div className="image-grid">
           {items.map((item, index) => (
-            <div
-              key={index}
-              className="grid-item"
-              onMouseEnter={(e) => e.currentTarget.classList.add("hover")}
-              onMouseLeave={(e) => e.currentTarget.classList.remove("hover")}
-            >
+            <div key={index} className="grid-item">
               <img src={item.image} alt={item.title} className="grid-image" />
 <<<<<<< Updated upstream
               <button
@@ -151,16 +92,15 @@ function HomePage() {
         </div>
         <img src={rightArrow} alt="Right Arrow" className="arrow right-arrow" />
       </div>
-
       <div className="map-container">
         <img src={mapImage} alt="Map" className="map-image" />
       </div>
-
-      {/* Popup */}
       {popupVisible && (
         <div className="popup-overlay">
           <div className="popup">
-            <h3 className="popup-title">Confirm details for {items[currentPlan]?.title}</h3>
+            <h3 className="popup-title">
+              Confirm details for {items[currentPlan]?.title}
+            </h3>
             <div className="popup-body">
               <label className="popup-label">Date:</label>
               <input type="date" className="popup-input" />

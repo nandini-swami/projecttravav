@@ -1,14 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
-import logo from '../logo.png';
-import settingsIcon from '../settingsIcon.png';
-import profileIcon from '../profileIcon.png';
 import './MyTripsPage.css';
 import { FaPencilAlt } from 'react-icons/fa';
 import TripEntry from './TripEntry';
 import { FaPlusCircle } from 'react-icons/fa';
-
+import NavBar from "../components/NavBar";
 
 function MyTripsPage() {
   const trips = [
@@ -19,10 +16,9 @@ function MyTripsPage() {
           time: "11:00 AM - 2:00 PM",
           location: "Navy Pier",
           rating: "★★★★☆",
-          tags: ["food", "pets", "family", "music"]
+          tags: ["food", "pets", "family", "music"],
         },
-        // More entries for this day
-      ]
+      ],
     },
     {
       day: "Monday October 14th",
@@ -31,78 +27,21 @@ function MyTripsPage() {
           time: "2:00 PM - 4:00 PM",
           location: "Boba King",
           rating: "★★★★☆",
-          tags: ["food", "drink", "family"]
+          tags: ["food", "drink", "family"],
         },
         {
           time: "7:00 PM - 9:00 PM",
           location: "The Bean",
           rating: "★★★★☆",
-          tags: ["outdoors", "picnic", "architecture"]
+          tags: ["outdoors", "picnic", "architecture"],
         },
-        // Entries for Sunday
-      ]
+      ],
     },
-    {
-      day: "Tuesday October 15th",
-      entries: [
-        {
-          time: "7:00 AM - 9:00 AM",
-          location: "Riverfront Yoga",
-          rating: "★★★★☆",
-          tags: ["activity", "picnic", "architecture"]
-        },
-        {
-          time: "7:00 AM - 9:00 AM",
-          location: "The Secret Mermaid",
-          rating: "★★★★☆",
-          tags: ["sculpture", "picnic"]
-        },
-        // Entries for Monday
-      ]
-    }
   ];
 
   return (
     <div className="MyTripsPage">
-<<<<<<< Updated upstream
-      <div className="top-bar" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-        <div className="top-left" style={{ display: 'flex', alignItems: 'center', marginRight: 'auto' }}>
-          <div className="invisible-button" onClick={() => window.location.href = "/"} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}> 
-            <img src={logo} alt="Logo" className="logo" />
-            <span className="title">TravAv</span>
-          </div>
-        </div>
-        <Link to="/" className="bubble home-bubble">
-          <span className="bubble-text home-text">Home</span>
-        </Link>
-        <div className="bubble categories-bubble">
-          <span className="bubble-text categories-text">Categories</span>
-        </div>
-        <Link to="/bookmarkpage" className="bubble bookmark-bubble">
-          <span className="bubble-text bookmark-text">Bookmarks</span>
-        </Link>
-=======
-      <div className="top-bar">
-        <img src={logo} alt="Logo" className="logo" />
-        <span className="title">TravAv</span>
-        <Link to="/" className="bubble home-bubble">
-          <span className="bubble-text home-text">Home</span>
-        </Link>
-        <Link to="/bookmarkpage" className="bubble bookmark-bubble">
-          <span className="bubble-text bookmark-text">Bookmarks</span>
-        </Link>
-        <div className="bubble categories-bubble">
-          <span className="bubble-text categories-text">Categories</span>
-        </div>
->>>>>>> Stashed changes
-        <Link to="/mytripspage" className="bubble my-trips-bubble">
-          <span className="bubble-text my-trips-text">My Trips</span>
-        </Link>
-        <img src={settingsIcon} alt="Settings" className="icon settings-icon" />
-        <img src={profileIcon} alt="Profile" className="icon profile-icon" />
-      </div>
-<<<<<<< Updated upstream
-
+      <NavBar /> 
       <div className="mytripspage-title">
         <span className="mytripspage-text">My Trips</span>
         <div>
@@ -132,7 +71,7 @@ function MyTripsPage() {
               />
             ))}
             <div className="add-trip-button">
-              <FaPlusCircle size={24} color="#828282" /> {/* Styling the icon */}
+              <FaPlusCircle size={24} color="#828282" />
             </div>
           </div>
         ))}

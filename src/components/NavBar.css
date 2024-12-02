@@ -1,0 +1,76 @@
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Right align the items */
+    width: 100%;
+    height: 60px;
+    background-color: white; /* Set the background color to white */
+    padding: 0 20px;
+    gap: 10px; /* Adjust the spacing between items */
+  }
+  
+.logo {
+    width: 40px;
+    height: 50px;
+}
+
+.title {
+    font-family: 'Merriweather-Regular', serif;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 40px;
+    margin-right: auto; /* Push the title to the left */
+}
+
+.bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 116px;
+    height: 41px;
+    border-radius: 20px; /* Rounded corners */
+    margin-right: -10px; /* Move the bubbles to the left */
+}
+  
+  /* Style for the clicked page button */
+.clicked-page-button {
+    background-color: #336D74; /* Same as the current homepage button */
+    margin-right: 2px;
+    color: white; /* Ensure the text is white for visibility */
+    border: none; /* No border for the clicked page button */
+  }
+  
+/* Style for non-clicked page buttons */
+.non-clicked-page-button {
+    background-color: white; /* White background for non-clicked buttons */
+    border: 2px solid #336D74; /* Border to match the design */
+    margin-right: 2px;
+    color: #336D74; /* Text color matches the border */
+}
+  
+.bubble-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+}
+
+.home-text {
+    color: white;
+}
+
+.bookmark-text, .categories-text, .my-trips-text {
+    color: #336D74;
+}
+
+.icon {
+    width: 40px; /* Adjust the size of the icon */
+    height: 40px; /* Adjust the size of the icon */
+    margin-right: -30px; /* Move the icons to the left */
+}
+
+.settings-icon {
+    margin-right: -1px; /* Move the settings icon closer to the My Trips button */
+}
+
+.profile-icon {
+    margin-right: 60px; /* Move the profile icon closer to the settings icon */
+}
