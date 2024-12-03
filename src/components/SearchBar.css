@@ -112,6 +112,7 @@
     padding: 10px;
     margin: 5px 0;
     cursor: pointer;
+    color: #336D74;
     background-color: #f9f9f9;
     background-color: white;
     border: 2px solid #336D74;
@@ -120,7 +121,8 @@
 }
 
 .popup-option:hover {
-    background-color: #e0e0e0;
+    color: white;
+    background-color: #336D74;
 }
 
 
