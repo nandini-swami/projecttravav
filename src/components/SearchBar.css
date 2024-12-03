@@ -24,7 +24,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 13.5px; /* Rounded corners */
-    border: 1px solid #828282;
+    border: 1px solid #336D74;
     background-color: white;
     padding: 0 10px;
 }
@@ -113,7 +113,6 @@
     margin: 5px 0;
     cursor: pointer;
     color: #336D74;
-    background-color: #f9f9f9;
     background-color: white;
     border: 2px solid #336D74;
     border-radius: 20px;
