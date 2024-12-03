@@ -1,0 +1,31 @@
+[
+    {
+      "day": "Sunday October 13th",
+      "entries": [
+        {
+          "time": "11:00 AM - 2:00 PM",
+          "location": "Navy Pier",
+          "rating": "★★★★☆",
+          "tags": ["food", "pets", "family", "music"]
+        }
+      ]
+    },
+    {
+      "day": "Monday October 14th",
+      "entries": [
+        {
+          "time": "2:00 PM - 4:00 PM",
+          "location": "Boba King",
+          "rating": "★★★★☆",
+          "tags": ["food", "drink", "family"]
+        },
+        {
+          "time": "7:00 PM - 9:00 PM",
+          "location": "The Bean",
+          "rating": "★★★★☆",
+          "tags": ["outdoors", "picnic", "architecture"]
+        }
+      ]
+    }
+  ]
+  
