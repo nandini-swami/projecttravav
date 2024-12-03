@@ -1,7 +1,7 @@
 import React from 'react';
 import '../components/LocationCard.css';
 
-function LocationCard({ location }) {
+function LocationCard({ location, index, addedPlans, handleAddToPlanClick }) {
   return (
     <div className="location-card">
       <h3 className="location-name">{location.name}</h3>
@@ -17,6 +17,14 @@ function LocationCard({ location }) {
         <p className="location-contact">{location.contact}</p>
         <a href={location.website} target="_blank" rel="noopener noreferrer" className="location-website">Visit Website</a>
       </div> */}
+      <button
+        className={`add-to-plan-btn ${
+          addedPlans.includes(index) ? "added" : ""
+        }`}
+        onClick={() => handleAddToPlanClick(index)}
+      >
+        {addedPlans.includes(index) ? "Added" : "Add to Plan"}
+      </button>
     </div>
   );
 }

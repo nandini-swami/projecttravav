@@ -51,15 +51,8 @@ function HomePage() {
           <div className="image-grid">
             {items.map((location, index) => (
               <div key={index} className="grid-item">
-                <LocationCard key={index} location={location} />
-                <button
-                  className={`add-to-plan-btn ${
-                    addedPlans.includes(index) ? "added" : ""
-                  }`}
-                  onClick={() => handleAddToPlanClick(index)}
-                >
-                  {addedPlans.includes(index) ? "Added" : "Add to Plan"}
-                </button>
+                <LocationCard key={index} location={location} 
+                  index={index} addedPlans={addedPlans} handleAddToPlanClick={handleAddToPlanClick}/>
               </div>
             ))}
           </div>
