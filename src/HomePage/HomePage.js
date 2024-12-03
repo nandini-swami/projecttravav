@@ -21,18 +21,37 @@ function HomePage() {
     setPopupVisible(true);
   };
 
-  const confirmAddToPlan = () => {
-    if (!addedPlans.includes(currentPlan)) {
-      setAddedPlans([...addedPlans, currentPlan]);
-    }
-    setPopupVisible(false);
-  };
-
   const closePopup = () => {
     setPopupVisible(false);
   };
 
   const items = tourismData['Chicago'];
+
+  const confirmAddToPlan = (date, fromTime, toTime, location) => {
+    const newEntry = {
+      time: `${fromTime} - ${toTime}`,
+      location,
+      rating: "★★★★☆", // Default or customizable
+      tags: ["custom"], // Add tags if necessary
+    };
+  
+    const storedTrips = JSON.parse(localStorage.getItem('trips')) || [];
+    const updatedTrips = [...storedTrips];
+  
+    // Add entry to the correct day or create a new one
+    const dayIndex = updatedTrips.findIndex((trip) => trip.day === date);
+    if (dayIndex !== -1) {
+      updatedTrips[dayIndex].entries.push(newEntry);
+    } else {
+      updatedTrips.push({
+        day: date,
+        entries: [newEntry],
+      });
+    }
+  
+    localStorage.setItem('trips', JSON.stringify(updatedTrips));
+    setPopupVisible(false);
+  };
   
   return (
       <div className="HomePage">
@@ -81,9 +100,19 @@ function HomePage() {
                 <button className="popup-cancel-btn" onClick={closePopup}>
                   Cancel
                 </button>
-                <button className="popup-confirm-btn" onClick={confirmAddToPlan}>
+                {/* <button className="popup-confirm-btn" onClick={confirmAddToPlan}>
                   Add to Chicago Trip
-                </button>
+                </button> */}
+                <button
+                className="popup-confirm-btn"
+                onClick={() => {
+                  const date = document.querySelector('input[type="date"]').value;
+                  const fromTime = document.querySelectorAll('input[type="time"]')[0].value;
+                  const toTime = document.querySelectorAll('input[type="time"]')[1].value;
+                  confirmAddToPlan(date, fromTime, toTime, items[currentPlan]?.name);
+                  }}>
+                Add to Chicago Trip
+              </button>
               </div>
             </div>
           </div>

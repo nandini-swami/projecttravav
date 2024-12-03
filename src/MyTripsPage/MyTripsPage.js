@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 import './MyTripsPage.css';
@@ -8,40 +8,26 @@ import { FaPlusCircle } from 'react-icons/fa';
 import NavBar from "../components/NavBar";
 
 function MyTripsPage() {
-  const trips = [
-    {
-      day: "Sunday October 13th",
-      entries: [
-        {
-          time: "11:00 AM - 2:00 PM",
-          location: "Navy Pier",
-          rating: "★★★★☆",
-          tags: ["food", "pets", "family", "music"],
-        },
-      ],
-    },
-    {
-      day: "Monday October 14th",
-      entries: [
-        {
-          time: "2:00 PM - 4:00 PM",
-          location: "Boba King",
-          rating: "★★★★☆",
-          tags: ["food", "drink", "family"],
-        },
-        {
-          time: "7:00 PM - 9:00 PM",
-          location: "The Bean",
-          rating: "★★★★☆",
-          tags: ["outdoors", "picnic", "architecture"],
-        },
-      ],
-    },
-  ];
+  const [trips, setTrips] = useState([]);
+  useEffect(() => {
+    // Load data from localStorage or fallback to JSON file
+    const storedTrips = JSON.parse(localStorage.getItem('trips'));
+    if (storedTrips) {
+      setTrips(storedTrips);
+    } else {
+      fetch('/data/myTripsData.json') // Adjust path to your JSON file
+        .then((res) => res.json())
+        .then((data) => {
+          setTrips(data);
+          localStorage.setItem('trips', JSON.stringify(data)); // Initialize localStorage
+        });
+    }
+  }, []);
+
 
   return (
     <div className="MyTripsPage">
-      <NavBar /> 
+      <NavBar />
       <div className="mytripspage-title">
         <span className="mytripspage-text">My Trips</span>
         <div>
@@ -57,12 +43,12 @@ function MyTripsPage() {
         </div>
       </div>
       <div className="days-container">
-        {trips.map((trip) => (
-          <div className="day-column" key={trip.day}>
+        {trips.map((trip, dayIndex) => (
+          <div className="day-column" key={dayIndex}>
             <h2 className="day-title">{trip.day}</h2>
-            {trip.entries.map((entry, index) => (
+            {trip.entries.map((entry, entryIndex) => (
               <TripEntry
-                key={index}
+                key={entryIndex}
                 date={trip.day}
                 time={entry.time}
                 location={entry.location}
