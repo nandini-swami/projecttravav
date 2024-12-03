@@ -226,6 +226,7 @@ body {
   top: 50%; /* Position the arrows halfway down the grid */
   transform: translateY(-50%);
   cursor: pointer;
+  z-index: 10;
 }
 
 .left-arrow {

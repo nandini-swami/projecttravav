@@ -6,7 +6,6 @@ function SearchBar() {
   const [searchInput, setSearchInput] = useState(""); // For user input
 
   const validOptions = ["New York", "Chicago"]; // Predefined valid options
-  const isValidOption = validOptions.includes(searchInput); // Check if input is valid
 
   // Close popup when clicking outside of it
   useEffect(() => {
