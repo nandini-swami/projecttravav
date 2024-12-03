@@ -1,0 +1,11 @@
+.bookmark-title {
+    padding-left: 30px; /* Align the title with the logo */
+    margin-top: 20px; /* Adjust the spacing between the top bar and the title */
+  }
+  
+  .bookmark-page-text {
+    font-family: 'Merriweather', serif;
+    font-size: 45px;
+    color: #F06829;
+    font-weight: bold;
+  }
