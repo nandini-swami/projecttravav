@@ -2,11 +2,13 @@
   border: 1px solid #ccc;
   padding: 15px; /* Increased padding for better spacing */
   padding-top: 0px;
+  overflow-y: auto;
   margin-bottom: 20px; /* More space between cards */
   background-color: #fff; /* Lighter background for better readability */
   border-radius: 8px; /* Slightly larger radius for a softer look */
   box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Slightly darker shadow for depth */
   font-family: 'Noto Sans'; /* Ensuring consistent font usage */
+  height: 225px;
 }
 
 .location-name {
@@ -61,13 +63,14 @@
 
 .location-rating {
   font-size: 18px;
+  margin-top: -20px;
   color: #FFD700; /* Gold color for the stars */
 }
 
 /* Add to Plan button styling */
 .add-to-plan-btn {
-  position: absolute; /* Position relative to its grid container */
-  bottom: 0.5%; /* Place the button in the bottom 20% of the grid container */
+  position: relative; /* Position relative to its grid container */
+  bottom: -10px; /* Place the button in the bottom 20% of the grid container */
   left: 50%; /* Center the button horizontally */
   transform: translateX(-50%); /* Correct centering due to absolute positioning */
   width: 240px;
