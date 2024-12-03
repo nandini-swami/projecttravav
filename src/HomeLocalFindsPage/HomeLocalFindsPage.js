@@ -10,7 +10,7 @@ import "../HomePage/HomePage.css";
 import SearchBar from "../components/SearchBar";
 import { useNavigate } from 'react-router-dom';
 
-function HomePage() {
+function HomeLocalFindsPage() {
   const [addedPlans, setAddedPlans] = useState([]);
   const [popupVisible, setPopupVisible] = useState(false);
   const [currentPlan, setCurrentPlan] = useState(null);
@@ -56,7 +56,7 @@ function HomePage() {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate('/homelocalfinds');
+    navigate('/');
   };
   
 
@@ -68,12 +68,12 @@ function HomePage() {
           <span className="location-text">Chicago</span>
         </div>
         <div className="section-titles">
-          <span className="tourism-travel-text">Tourism Travel</span>
-          <span className="local-finds-text" onClick={handleNavigate}>Local Finds</span>
+          <span className="tourism-travel-text-local" onClick={handleNavigate}>Tourism Travel</span>
+          <span className="local-finds-text-local" >Local Finds</span>
         </div>
         <div className="underline-bar">
-        <div className="underline-bar-left"></div>
-        <div className="underline-bar-right"></div>
+        <div className="underline-bar-left-local"></div>
+        <div className="underline-bar-right-local"></div>
       </div>
         
         <div className="grid-container">
@@ -141,4 +141,4 @@ function HomePage() {
     );
 }
 
-export default HomePage;
+export default HomeLocalFindsPage;

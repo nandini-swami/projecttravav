@@ -26,62 +26,63 @@
 }
 
 .tourism-travel-text {
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 20px;
-  color: #336D74;
-  margin-right: 150px; /* Adjust the spacing between the two texts */
-}
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    color: #336D74;
+    margin-right: 150px; /* Adjust the spacing between the two texts */
+  }
+  
+  .local-finds-text {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    color: #828282;
+  }
+  
+  .tourism-travel-text-local {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    color: #828282;
+    margin-right: 150px; /* Adjust the spacing between the two texts */
+  }
+  
+  .local-finds-text-local {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    color: #336D74;
+  }
+  
+  
+  .underline-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 5px; /* Adjust the spacing between the texts and the underline bar */
+    padding-left: 585px; /* Align the underline bar with the specified position */
+  }
+  
+  .underline-bar-left {
+    width: 160px;
+    height: 3px;
+    background-color: #336D74;
+  }
+  
+  .underline-bar-right {
+    width: 489px;
+    height: 3px;
+    background-color: #828282;
+  }
+  
+  .underline-bar-left-local {
+    width: 160px;
+    height: 3px;
+    background-color: #828282;
+  }
+  
+  .underline-bar-right-local {
+    width: 489px;
+    height: 3px;
+    background-color: #336D74;
+  }
 
-.local-finds-text {
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 20px;
-  color: #828282;
-}
-
-.tourism-travel-text-local {
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 20px;
-  color: #828282;
-  margin-right: 150px; /* Adjust the spacing between the two texts */
-}
-
-.local-finds-text-local {
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 20px;
-  color: #336D74;
-}
-
-
-.underline-bar {
-  display: flex;
-  align-items: center;
-  margin-top: 5px; /* Adjust the spacing between the texts and the underline bar */
-  padding-left: 585px; /* Align the underline bar with the specified position */
-}
-
-.underline-bar-left {
-  width: 160px;
-  height: 3px;
-  background-color: #336D74;
-}
-
-.underline-bar-right {
-  width: 489px;
-  height: 3px;
-  background-color: #828282;
-}
-
-.underline-bar-left-local {
-  width: 160px;
-  height: 3px;
-  background-color: #828282;
-}
-
-.underline-bar-right-local {
-  width: 489px;
-  height: 3px;
-  background-color: #336D74;
-}
 .image-grid {
   display: grid;
   grid-template-columns: repeat(2, 290px);

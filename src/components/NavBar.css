@@ -30,6 +30,7 @@
     height: 41px;
     border-radius: 20px; /* Rounded corners */
     margin-right: -10px; /* Move the bubbles to the left */
+    text-decoration: none;
 }
   
   /* Style for the clicked page button */
