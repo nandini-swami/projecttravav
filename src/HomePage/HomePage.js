@@ -6,8 +6,8 @@ import image1 from "../image1.png";
 import leftArrow from "../leftArrow.png";
 import rightArrow from "../rightArrow.png";
 import NavBar from "../components/NavBar";
-import LocationCard from '/Users/nandiniswami/Desktop/weather-app/projecttravav/src/components/LocationCard.js'; 
-import tourismData from '/Users/nandiniswami/Desktop/weather-app/projecttravav/src/Data/tourismData.json';
+import LocationCard from '../components/LocationCard.js'; 
+import tourismData from '../Data/tourismData.json';
 import "../HomePage/HomePage.css";
 import SearchBar from "../components/SearchBar";
 
