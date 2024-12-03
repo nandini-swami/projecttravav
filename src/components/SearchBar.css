@@ -1,38 +1,25 @@
-.search-bar {
-    display: flex;
-    align-items: center;
-    width: 1250px;
-    height: 46px;
-    background-color: white;
-    border: 2px solid #336D74;
-    border-radius: 23px; /* Rounded corners */
-    margin: 10px auto; /* Move the search bar up by reducing the top margin */
-    margin-left: 30px;
-    padding-left: 20px; /* Add left padding */
-  }
-  
-  .search-icon {
+.search-icon {
     width: 24px; /* Adjust the size of the search icon */
     height: 24px; /* Adjust the size of the search icon */
     margin-right: 10px;
-  }
-  
-  .search-text {
+}
+
+.search-text {
     font-family: 'Noto Sans', sans-serif;
     font-size: 16px;
     color: #828282;
-  }
-  
-  /* Tags Styling */
-  .tags {
+}
+
+/* Tags Styling */
+.tags {
     display: flex;
     align-items: center;
     margin-top: 10px; /* Adjust the spacing between the search bar and tags */
     gap: 10px; /* Space between tags */
     padding-left: 30px; /* Align the tags with the search bar */
-  }
-  
-  .tag {
+}
+
+.tag {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,36 +27,104 @@
     border: 1px solid #828282;
     background-color: white;
     padding: 0 10px;
-  }
-  
-  .family-friendly-tag {
+}
+
+.family-friendly-tag {
     width: 126px;
     height: 27px;
-  }
-  
-  .food-tag {
+}
+
+.food-tag {
     width: 73px;
     height: 27px;
-  }
-  
-  .music-tag {
+}
+
+.music-tag {
     width: 71px;
     height: 27px;
-  }
-  
-  .add-filter-tag {
+}
+
+.add-filter-tag {
     width: 97px;
     height: 27px;
     border: 1px solid #336D74;
-  }
-  
-  .tag-text {
+}
+
+.tag-text {
     font-family: 'Noto Sans', sans-serif;
     font-size: 14px;
     color: #828282;
-  }
-  
-  .add-filter-text {
+}
+
+.add-filter-text {
     color: #336D74;
-  }
+}
+
+/* Search bar hover effect */
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 92%;
+    height: 46px;
+    background-color: white;
+    border: 2px solid #336D74;
+    border-radius: 23px;
+    margin: 10px auto;
+    margin-left: 30px;
+    padding-left: 20px;
+    cursor: pointer; /* Indicate clickable area */
+}
+
+/* Dimmed background */
+.dimmed-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 99; /* Below popup but above other content */
+}
+
+/* Popup container */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+    z-index: 100; /* Above dimmed background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for better visibility */
+}
+
+/* Popup options */
+.popup-options {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.popup-option {
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    color: #336D74;
+    background-color: #f9f9f9;
+    background-color: white;
+    border: 2px solid #336D74;
+    border-radius: 20px;
+    margin-right: 2px;
+}
+
+.popup-option:hover {
+    color: white;
+    background-color: #336D74;
+}
+
+
+
   
