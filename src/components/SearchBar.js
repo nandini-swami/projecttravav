@@ -4,6 +4,7 @@ import "../components/SearchBar.css";
 function SearchBar() {
   const [isClicked, setIsClicked] = useState(false); // For popup visibility
   const [searchInput, setSearchInput] = useState(""); // For user input
+  const [tags, setTags] = useState(["family friendly", "pet friendly", "music", "food"]); // For currently stored tags
 
   const validOptions = ["New York", "Chicago"]; // Predefined valid options
 
@@ -60,7 +61,19 @@ function SearchBar() {
       )}
 
       {/* Tags */}
+
       <div className="tags">
+        {tags.map((tag) => {
+          return (<div className={`tag`}>
+          <span className="tag-text">{tag}</span>
+          </div>)
+        })}
+
+      <div className="tag add-filter-tag">
+          <span className="tag-text add-filter-text">add filter</span>
+        </div>
+      </div>
+      {/* <div className="tags">
         <div className="tag family-friendly-tag">
           <span className="tag-text">family friendly X</span>
         </div>
@@ -73,7 +86,7 @@ function SearchBar() {
         <div className="tag add-filter-tag">
           <span className="tag-text add-filter-text">add filter</span>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

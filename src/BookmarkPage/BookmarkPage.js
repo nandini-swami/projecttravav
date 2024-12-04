@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../App.css';
+import '../BookmarkPage/BookmarkPage.css'
 import NavBar from "../components/NavBar"; // Import the NavBar component
 import searchIcon from '../searchIcon.png'; // Assuming you have a search icon image
 import longImage from '../longImage.png'; 
