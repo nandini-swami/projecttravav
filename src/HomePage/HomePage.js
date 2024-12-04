@@ -15,6 +15,7 @@ function HomePage() {
   const [popupVisible, setPopupVisible] = useState(false);
   const [currentPlan, setCurrentPlan] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null); // Track the hovered grid item
+  const [searchInput, setSearchInput] = useState("");
 
   const handleAddToPlanClick = (index) => {
     setCurrentPlan(index);
@@ -25,7 +26,9 @@ function HomePage() {
     setPopupVisible(false);
   };
 
-  const items = tourismData['New York'];
+  const selectedCity = searchInput || "Chicago"; 
+
+  const filteredItems = tourismData[selectedCity] || [];
 
   const confirmAddToPlan = (date, fromTime, toTime, location) => {
     const newEntry = {
@@ -63,7 +66,7 @@ function HomePage() {
   return (
       <div className="HomePage">
         <NavBar /> 
-        <SearchBar />
+        <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
         <div className="location">
           <span className="location-text">Chicago</span>
         </div>
@@ -79,7 +82,7 @@ function HomePage() {
         <div className="grid-container">
           <img src={leftArrow} alt="Left Arrow" className="arrow left-arrow" />
           <div className="image-grid">
-            {items.map((location, index) => (
+            {filteredItems.map((location, index) => (
               <div
               key={index}
               className={`grid-item ${hoveredIndex === index ? "hover" : ""}`}
@@ -104,7 +107,7 @@ function HomePage() {
           <div className="popup-overlay">
             <div className="popup">
               <h3 className="popup-title">
-                Confirm details for {items[currentPlan]?.title}
+                Confirm details for {filteredItems[currentPlan]?.title}
               </h3>
               <div className="popup-body">
                 <label className="popup-label">Date:</label>
@@ -129,7 +132,7 @@ function HomePage() {
                   const date = document.querySelector('input[type="date"]').value;
                   const fromTime = document.querySelectorAll('input[type="time"]')[0].value;
                   const toTime = document.querySelectorAll('input[type="time"]')[1].value;
-                  confirmAddToPlan(date, fromTime, toTime, items[currentPlan]?.name);
+                  confirmAddToPlan(date, fromTime, toTime, filteredItems[currentPlan]?.name);
                   }}>
                 Add to Chicago Trip
               </button>

@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "../components/SearchBar.css";
 
-function SearchBar() {
+function SearchBar({ searchInput, setSearchInput }) {
   const [isClicked, setIsClicked] = useState(false); // For popup visibility
-  const [searchInput, setSearchInput] = useState(""); // For user input
-  const [tags, setTags] = useState(["family friendly", "pet friendly", "music", "food"]); // For currently stored tags
   const [typedLocation, setTypedLocation] = useState(""); // For user-typed location
-
+  const [tags, setTags] = useState(["family friendly", "pet friendly", "music", "food"]); // For currently stored tags
   const validOptions = ["New York", "Chicago"]; // Predefined valid options
 
   // Close popup when clicking outside of it
@@ -25,9 +23,9 @@ function SearchBar() {
 
   const handleKeyPress = (event) => {
     if (event.key === "Enter" && typedLocation.trim() !== "") {
-      setSearchInput(typedLocation); // Set input to user-typed location
-      setTypedLocation(""); // Clear typed location
-      setIsClicked(false); // Close popup
+      setSearchInput(typedLocation); // Update the global search input state
+      setTypedLocation(""); // Clear the typed location
+      setIsClicked(false); // Close the popup
     }
   };
 
@@ -51,7 +49,7 @@ function SearchBar() {
         <>
           <div className="dimmed-background"></div> {/* Dimmed background */}
           <div className="popup">
-          <div className="popup-input">
+            <div className="popup-input">
               <input
                 type="text"
                 value={typedLocation}
@@ -67,8 +65,8 @@ function SearchBar() {
                   key={option}
                   className="popup-option"
                   onClick={() => {
-                    setSearchInput(option); // Set input to selected option
-                    setIsClicked(false); // Close popup
+                    setSearchInput(option); // Update the global search input state
+                    setIsClicked(false); // Close the popup
                   }}
                 >
                   {option}
@@ -78,12 +76,10 @@ function SearchBar() {
           </div>
         </>
       )}
-
-      {/* Tags */}
       <div className="tags">
         {tags.map((tag) => {
           return (
-            <div className={`tag`}>
+            <div className="tag">
               <span className="tag-text">{tag}</span>
             </div>
           );
@@ -91,8 +87,8 @@ function SearchBar() {
         <div className="tag add-filter-tag">
           <span className="tag-text add-filter-text">add filter</span>
         </div>
-      </div>
     </div>
+  </div>
   );
 }
 
