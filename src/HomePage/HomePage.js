@@ -25,7 +25,7 @@ function HomePage() {
     setPopupVisible(false);
   };
 
-  const items = tourismData['Chicago'];
+  const items = tourismData['New York'];
 
   const confirmAddToPlan = (date, fromTime, toTime, location) => {
     const newEntry = {
