@@ -124,6 +124,25 @@
     background-color: #336D74;
 }
 
+.popup-input {
+    margin-top: 10px;
+}
+
+.popup-input-field {
+    width: 90%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    color: #336D74;
+}
+
+.popup-input-field:focus {
+    outline: none;
+    border-color: #336D74;
+}
+  
 
 
   

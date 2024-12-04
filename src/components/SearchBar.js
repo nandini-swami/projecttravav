@@ -5,6 +5,7 @@ function SearchBar() {
   const [isClicked, setIsClicked] = useState(false); // For popup visibility
   const [searchInput, setSearchInput] = useState(""); // For user input
   const [tags, setTags] = useState(["family friendly", "pet friendly", "music", "food"]); // For currently stored tags
+  const [typedLocation, setTypedLocation] = useState(""); // For user-typed location
 
   const validOptions = ["New York", "Chicago"]; // Predefined valid options
 
@@ -21,6 +22,14 @@ function SearchBar() {
       document.removeEventListener("click", handleOutsideClick);
     };
   }, []);
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter" && typedLocation.trim() !== "") {
+      setSearchInput(typedLocation); // Set input to user-typed location
+      setTypedLocation(""); // Clear typed location
+      setIsClicked(false); // Close popup
+    }
+  };
 
   return (
     <div>
@@ -42,6 +51,16 @@ function SearchBar() {
         <>
           <div className="dimmed-background"></div> {/* Dimmed background */}
           <div className="popup">
+          <div className="popup-input">
+              <input
+                type="text"
+                value={typedLocation}
+                onChange={(e) => setTypedLocation(e.target.value)}
+                onKeyPress={handleKeyPress}
+                placeholder="Type a location..."
+                className="popup-input-field"
+              />
+            </div>
             <div className="popup-options">
               {validOptions.map((option) => (
                 <div
@@ -61,32 +80,18 @@ function SearchBar() {
       )}
 
       {/* Tags */}
-
       <div className="tags">
         {tags.map((tag) => {
-          return (<div className={`tag`}>
-          <span className="tag-text">{tag}</span>
-          </div>)
+          return (
+            <div className={`tag`}>
+              <span className="tag-text">{tag}</span>
+            </div>
+          );
         })}
-
-      <div className="tag add-filter-tag">
-          <span className="tag-text add-filter-text">add filter</span>
-        </div>
-      </div>
-      {/* <div className="tags">
-        <div className="tag family-friendly-tag">
-          <span className="tag-text">family friendly X</span>
-        </div>
-        <div className="tag food-tag">
-          <span className="tag-text">food X</span>
-        </div>
-        <div className="tag music-tag">
-          <span className="tag-text">music X</span>
-        </div>
         <div className="tag add-filter-tag">
           <span className="tag-text add-filter-text">add filter</span>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
