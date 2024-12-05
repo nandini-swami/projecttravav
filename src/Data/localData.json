@@ -1,0 +1,79 @@
+{
+    "Chicago": [
+      {
+        "name": "Local",
+        "description": "Navy Pier is the People's Pier, Chicago's lakefront treasure, welcoming all and offering dynamic and eclectic experiences through partnerships...",
+        "tags": ["family friendly", "music", "food", "pet friendly"],
+        "address": "600 E Grand Ave, Chicago, IL 60611",
+        "contact": "+1 312-595-7437",
+        "website": "navypier.org",
+        "rating": "★★★★☆"
+      },
+      {
+        "name": "Millennium Park",
+        "description": "Millennium Park is a stunning architectural and cultural hub in the heart of Chicago, featuring iconic landmarks like the Cloud Gate (The Bean), lush gardens, and outdoor performances.",
+        "tags": ["family friendly", "art", "outdoor", "photography"],
+        "address": "201 E Randolph St, Chicago, IL 60602",
+        "contact": "+1 312-742-1168",
+        "website": "millenniumpark.org",
+        "rating": "★★★★★"
+      },
+      {
+        "name": "Art Institute of Chicago",
+        "description": "The Art Institute of Chicago is one of the world's premier art museums, boasting an extensive collection of artwork ranging from Impressionist masterpieces to contemporary exhibits.",
+        "tags": ["art", "culture", "history", "educational"],
+        "address": "111 S Michigan Ave, Chicago, IL 60603",
+        "contact": "+1 312-443-3600",
+        "website": "artic.edu",
+        "rating": "★★★★★"
+      },
+      {
+        "name": "Willis Tower Skydeck",
+        "description": "The Willis Tower Skydeck offers breathtaking views of Chicago and beyond from its 103rd floor, featuring The Ledge, a glass balcony extending four feet outside the building.",
+        "tags": ["adventure", "photography", "family friendly", "landmark"],
+        "address": "233 S Wacker Dr, Chicago, IL 60606",
+        "contact": "+1 312-875-9696",
+        "website": "theskydeck.com",
+        "rating": "★★★★☆"
+      }
+    ],
+    "New York": [
+      {
+        "name": "Central Park",
+        "description": "Central Park is the green heart of New York City, offering a peaceful mixture of lakes, forests, and trails. It's a hub for outdoor activities, culture, and relaxation.",
+        "tags": ["outdoors", "picnic", "sightseeing", "family friendly"],
+        "address": "New York, NY 10024",
+        "contact": "+1 212-310-6600",
+        "website": "centralparknyc.org",
+        "rating": "★★★★★"
+      },
+      {
+        "name": "Statue of Liberty",
+        "description": "A symbol of freedom and democracy, the Statue of Liberty stands proudly on Liberty Island and offers tours, a museum, and breathtaking views of the New York City skyline.",
+        "tags": ["landmark", "history", "educational", "adventure"],
+        "address": "Liberty Island, New York, NY 10004",
+        "contact": "+1 212-363-3200",
+        "website": "nps.gov/stli",
+        "rating": "★★★★★"
+      },
+      {
+        "name": "Times Square",
+        "description": "Times Square is the vibrant heart of New York City, known for its dazzling lights, Broadway theaters, shopping, and an electrifying atmosphere.",
+        "tags": ["entertainment", "shopping", "nightlife", "photography"],
+        "address": "Manhattan, NY 10036",
+        "contact": "+1 212-768-1560",
+        "website": "timessquarenyc.org",
+        "rating": "★★★★☆"
+      },
+      {
+        "name": "The Metropolitan Museum of Art",
+        "description": "The Met is a world-renowned art museum, housing over two million works of art from ancient history to modern times, offering an immersive cultural experience.",
+        "tags": ["art", "culture", "history", "educational"],
+        "address": "1000 5th Ave, New York, NY 10028",
+        "contact": "+1 212-535-7710",
+        "website": "metmuseum.org",
+        "rating": "★★★★★"
+      }
+    ]
+  }
+  
