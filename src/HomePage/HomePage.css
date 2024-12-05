@@ -6,6 +6,7 @@
     justify-content: center; /* Centers items in the container */
     margin-top: 20px;
     align-items: center;
+    width: auto;
   }
 
 .location {
@@ -139,7 +140,7 @@
 .grid-image {
   width: 100%;
   height: auto;
-  border-radius: 8px; /* Slightly rounded corners */
+  border-radius: 8px; 
 }
 
 .grid-info {

@@ -1,11 +1,51 @@
+/* Title Section */
 .bookmark-title {
-    padding-left: 30px; /* Align the title with the logo */
-    margin-top: 20px; /* Adjust the spacing between the top bar and the title */
-  }
-  
-  .bookmark-page-text {
-    font-family: 'Merriweather', serif;
-    font-size: 45px;
-    color: #F06829;
-    font-weight: bold;
-  }
+  padding-left: 30px; /* Align the title with the logo */
+  margin-top: 20px; /* Adjust the spacing between the top bar and the title */
+}
+
+.bookmark-page-text {
+  font-family: 'Merriweather', serif;
+  font-size: 45px;
+  color: #F06829;
+  font-weight: bold;
+}
+
+/* City Sections */
+.bookmark-city-section {
+  margin: 30px 20px; /* Add spacing around each city section */
+}
+
+.bookmark-city-title {
+  font-family: 'Merriweather', serif;
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Grid Container for Location Cards */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 0px; /* Space between grid items */
+  justify-items: start; /* Center cards horizontally */
+  width: auto;
+}
+
+/* Individual Grid Items */
+.grid-item {
+  width: 250px; /* Adjust card width to avoid full-page sizing */
+  transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.grid-item.hover {
+  transform: scale(1.05); /* Slightly enlarge card on hover */
+}
+
+/* Location Card Styling */
+.location-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
