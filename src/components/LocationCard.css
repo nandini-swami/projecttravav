@@ -1,101 +1,175 @@
+/* Location Card Styling */
 .location-card {
   border: 1px solid #ccc;
-  padding: 15px; /* Increased padding for better spacing */
-  padding-top: 0px;
+  padding: 15px;
   overflow-y: auto;
-  margin-bottom: 20px; /* More space between cards */
+  margin-bottom: 20px;
   background-color: #fff; /* Lighter background for better readability */
   border-radius: 8px; /* Slightly larger radius for a softer look */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Slightly darker shadow for depth */
-  font-family: 'Noto Sans'; /* Ensuring consistent font usage */
-  height: 225px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Slightly darker shadow for depth */
+  font-family: 'Noto Sans'; /* Consistent font usage */
+  height: auto; /* Allow dynamic height based on content */
 }
 
+/* Title Styling */
 .location-name {
-  font-size: 20px; /* Larger font size for emphasis */
+  font-size: 20px;
   color: #333;
+  margin-bottom: 5px;
 }
 
+/* Rating Styling */
+.location-rating {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #FFD700; /* Gold color for stars */
+}
+
+/* Description Styling */
 .location-description {
   font-size: 14px;
   color: #666;
+  margin-bottom: 10px;
   overflow-y: auto;
-  margin-bottom: 10px; /* More separation from tags */
 }
 
+/* Tags Styling */
 .location-tags {
-  display: flex;        /* Align tags in a row */
-  overflow-x: auto;     /* Enable horizontal scrolling */
-  white-space: nowrap;  /* Prevent wrapping of contents */
-  gap: 5px;             /* Space between tags */
-  padding: 5px 10px;   
-  padding-left: 0px;
-  padding-bottom: 0px;
-  scrollbar-width: thin;        /* Optional: for thinner scrollbars */
-  scrollbar-color: #888 #f0f0f0; /* Optional: custom colors for the scrollbar */
+  display: flex; /* Align tags in a row */
+  flex-wrap: wrap; /* Allow wrapping if tags exceed the container width */
+  gap: 5px; /* Space between tags */
+  margin-bottom: 10px;
 }
 
 .tag {
-  flex-shrink: 0;       
+  flex-shrink: 0;
   background-color: #b2ecff;
   border-radius: 10px;
   font-size: 12px;
   color: #336D74;
+  padding: 3px 8px;
 }
 
-
-.location-info {
-  margin-top: 2px;
-  line-height: 1.6; 
-}
-
-.location-address, .location-contact {
-  font-size: 14px;
-  color: #555;
-}
-
-.location-website {
-  display: inline-block; /* Aligns better within flow */
-  color: #007BFF;
-  margin-top: 5px;
-  text-decoration: none;
-  font-weight: bold; /* Makes the link stand out more */
-}
-
-.location-rating {
-  font-size: 18px;
-  margin-top: -20px;
-  color: #FFD700; /* Gold color for the stars */
-}
-
-/* Add to Plan button styling */
+/* Add to Plan Button Styling */
 .add-to-plan-btn {
-  position: relative; /* Position relative to its grid container */
-  bottom: 0px; /* Place the button in the bottom 20% of the grid container */
-  left: 50%; /* Center the button horizontally */
-  transform: translateX(-50%); /* Correct centering due to absolute positioning */
-  width: 240px;
-  height: 30px;
-  font-size: 16px; /* Larger font size for visibility */
-  font-family: "Noto Sans", sans-serif; /* Changed to Noto Sans */
-  color: #F06829; /* Orange text color matching screenshot */
+  display: inline-block; /* Ensure the button aligns naturally */
+  margin: 10px auto; /* Center the button */
+  padding: 8px 20px; /* Padding for a comfortable clickable area */
+  font-size: 16px;
+  font-family: "Noto Sans", sans-serif;
+  color: #F06829; /* Orange text color */
   background-color: white; /* White background */
   border: 2px solid #F06829; /* Orange border */
   border-radius: 25px; /* Pill-shaped button */
-  cursor: pointer; /* Pointer cursor on hover */
+  cursor: pointer;
   transition: all 0.3s ease; /* Smooth hover effect */
-  font-weight: 500; /* Medium weight for text */
+  font-weight: 500;
   text-align: center;
-  white-space: nowrap;
 }
 
-/* Hover effect */
+/* Hover Effect for Add to Plan Button */
 .add-to-plan-btn:hover {
   background-color: #F06829; /* Orange background on hover */
   color: white; /* White text on hover */
 }
 
+/* Added State Styling */
 .add-to-plan-btn.added {
   background-color: #F06829;
   color: white;
+}
+
+/* Dimmed Background */
+.dimmed-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  z-index: 999; /* Below the popup, above everything else */
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Above the dimmed background */
+}
+
+/* Popup Styling */
+.popup {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
+  text-align: center;
+}
+
+.popup-title {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.popup-body {
+  margin-bottom: 20px;
+}
+
+.popup-label {
+  font-size: 14px;
+  color: #666;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.popup-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.popup-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup-cancel-btn,
+.popup-confirm-btn {
+  padding: 8px 20px;
+  font-size: 14px;
+  font-family: "Noto Sans", sans-serif;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.popup-cancel-btn {
+  background-color: #ccc;
+  color: white;
+}
+
+.popup-cancel-btn:hover {
+  background-color: #aaa;
+}
+
+.popup-confirm-btn {
+  background-color: #F06829;
+  color: white;
+}
+
+.popup-confirm-btn:hover {
+  background-color: #D05020;
 }
