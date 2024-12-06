@@ -648,7 +648,7 @@ body {
   display: flex;
 
   padding: 0 30px; /* Adjust the padding as needed */
-  margin-top: 20px; /* Adjust the spacing between the top bar and the title */
+  margin-top: 15px; /* Adjust the spacing between the top bar and the title */
 }
 
 .categories-page-text {
@@ -664,37 +664,43 @@ body {
   font-size: 30px;
   color: black;
   font-weight: bold;
-  text-indent: 200px;
+  text-indent: 260px;
 }
 
 .categories-grid {
   margin-left: 10px;
   display: grid;
-  grid-template-columns: repeat(2, 150px);
+  grid-template-columns: repeat(2, 180px);
   grid-template-rows: repeat(3, 1fr);
-  gap: 20px;
+  gap: 15px;
   padding: 0.5px; /* Adjust the padding as needed */
+  margin-bottom: 10px;
 
 }
 .big-box {
-  width: 600px; /* Adjust the width as needed */
-  height: 500px; /* Adjust the height as needed */
+  width: 820px; /* Adjust the width as needed */
+  height: 580px; /* Adjust the height as needed */
   border: 2px solid #336D74;
   border-radius: 20px; /* Rounded corners */
-  background-color: #f5f5f5; /* Light background color */
+  background-color: white; /* Light background color */
   display: flex;
   align-items: center;
-  margin-right:240px; /* Space between the grid and the big box */
+  margin-right:100px; /* Space between the grid and the big box */
   float: right;
-  margin-top: -510px;
+  margin-top: -592px;
+
+
+  position: relative;
+  flex-direction: column;
+
 }
 
 .category-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 150px; /* Adjust the size of the boxes as needed */
-  height: 150px; /* Adjust the size of the boxes as needed */
+  width: 180px; /* Adjust the size of the boxes as needed */
+  height: 180px; /* Adjust the size of the boxes as needed */
   border: 2px solid #336D74;
   border-radius: 20px; /* Rounded corners */
 }
@@ -703,16 +709,139 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 150px; /* Adjust the size of the boxes as needed */
-  height: 150px; /* Adjust the size of the boxes as needed */
+  width: 180px; /* Adjust the size of the boxes as needed */
+  height: 180px; /* Adjust the size of the boxes as needed */
   border: 2px solid #336D74;
   border-radius: 20px; /* Rounded corners */
-  background-color: #e0f2f1; /* Light version of the outline color */
+  background-color: #336D74; /* Light version of the outline color */
 }
 .category-text {
   font-family: 'Noto Sans', sans-serif;
-  font-size: 16px;
-  color: #828282;
+  font-size: 25px;
+  color: black;
   text-align: center;
 }
 
+.category-text-food {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 25px;
+  color:white;
+  text-align: center;
+}
+
+
+.big-box-content {
+  margin-top: -210px;
+  margin-left: -50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.big-box-title {
+  font-family: 'Merriweather', serif;
+  font-size: 30px;
+  color: black;
+  margin-top: 220px;
+  margin-bottom: 30px;
+  margin-left:10px;
+  font-weight: bold;
+}
+
+.location-item {
+  display: flex;
+  align-items: left;
+  margin-bottom: 20px;
+}
+
+.add-to-plan-bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  border: 2px solid #F06829;
+  border-radius: 15px; /* Rounded corners */
+  color: #F06829;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  margin-right: 15px;
+  cursor: pointer;
+  margin-left:-5px;
+
+}
+
+.location-details {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  text-wrap: wrap;
+}
+
+.location-title {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-left: -380px;
+}
+.location-title-gio {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 5px;
+
+}
+
+.location-title-cal {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 5px;
+
+}
+
+.location-title-al {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 5px;
+
+}
+
+
+.location-description {
+  flex-direction: column;
+  font-family: 'Merriweather', serif;
+  font-size: 14px;
+  color: darkgrey;
+
+
+}
+.location-image {
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners */
+  margin-left: 10px; /* Space between the details and the image */
+}
+
+.star-image {
+  width: 80px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: -5px; /* Space between the description and the star image */
+  margin-top: -20px; /* Space between the description and the star image */
+}
+
+.scroll-bar {
+  position: absolute;
+  right: 10px; /* Position the scroll bar on the right side */
+  top: 10px; /* Position the scroll bar at the top */
+  width: 10px; /* Adjust the width as needed */
+  height: 20%; /* Adjust the height as needed */
+  background-color: darkgrey; /* Fill the scroll bar with dark grey */
+  border-radius: 5px; /* Rounded corners */
+}
