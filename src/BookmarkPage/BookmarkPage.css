@@ -1,11 +1,4 @@
 /* Title Section */
-.title-button-container {
-  display: flex;
-  justify-content: space-between;  /* Pushes the title to the left and the button to the right */
-  align-items: center;  /* Aligns items vertically in the middle */
-  padding: 10px 20px;  /* Adds some padding around the elements */
-}
-
 .bookmark-title {
   padding-left: 30px; /* Align the title with the logo */
   margin-top: 20px; /* Adjust the spacing between the top bar and the title */
@@ -29,6 +22,7 @@
   color: #333;
   margin-bottom: 20px;
 }
+
 /* Grid Container for Location Cards */
 .grid-container {
   display: grid;
@@ -55,51 +49,3 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
 }
-
-.add-custom-location {
-  background-color: #f8f9fa; /* Light gray background */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px auto; /* Center the form horizontally */
-  max-width: 400px; /* Maximum width of the form */
-}
-
-.add-custom-location input[type="text"],
-.add-custom-location input[type="number"],
-.add-custom-location select {
-  width: 100%; /* Full width of the container */
-  padding: 8px;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  display: block; /* Ensures each input takes its own line */
-}
-
-.add-custom-location input[type="text"]:focus,
-.add-custom-location input[type="number"]:focus,
-.add-custom-location select:focus {
-  border-color: #6658d3; /* Focus state with a different border color */
-  outline: none;
-}
-
-.add-location-button {
-  background-color: #336D74; /* Soft pink color */
-  color: white;
-  padding: 10px 20px; /* Comfortable padding */
-  font-size: 16px; /* Legible text size */
-  border: none;
-  border-radius: 25px; /* Fully rounded corners */
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
-  outline: none; /* Remove default focus outline */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-.add-location-button:hover {
-  background-color: #3b7177; /* Darker shade on hover */
-  transform: scale(1.05); /* Slightly larger on hover */
-}
-
-
