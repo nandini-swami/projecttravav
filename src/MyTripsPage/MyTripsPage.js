@@ -71,7 +71,7 @@ function MyTripsPage() {
       </div>
       <div className="days-container">
       <button onClick={handlePrev} className="nav-button" disabled={currentPage === 0}>
-          &lt; {/* This represents the left arrow symbol "<" */}
+          <span>&lt;</span> {/* This represents the left arrow symbol "<" */}
         </button>
         {displayedTrips.map((trip, dayIndex) => (
           <div className="day-column" key={dayIndex}>
@@ -92,7 +92,7 @@ function MyTripsPage() {
           </div>
         ))}
         <button onClick={handleNext} className="nav-button" disabled={endIndex >= trips.length}>
-          &gt; {/* This represents the right arrow symbol ">" */}
+          <span>&gt;</span> {/* This represents the right arrow symbol ">" */}
         </button>
       </div>
 
