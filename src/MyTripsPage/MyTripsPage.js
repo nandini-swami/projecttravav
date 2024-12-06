@@ -21,7 +21,7 @@ function MyTripsPage() {
     if (storedTrips) {
       setTrips(storedTrips);
     } else {
-      fetch('/data/myTripsData.json') 
+      fetch('/data/myTripsData.json') // Adjust path to your JSON file
         .then((res) => res.json())
         .then((data) => {
           setTrips(data);
@@ -29,7 +29,6 @@ function MyTripsPage() {
         });
     }
   }, []);
-  console.log(trips);
 
     // Function to handle Save in Popup
     const handleSaveDateRange = () => {
@@ -72,7 +71,7 @@ function MyTripsPage() {
       </div>
       <div className="days-container">
       <button onClick={handlePrev} className="nav-button" disabled={currentPage === 0}>
-          &lt; {/* Left arrow */}
+          <span>&lt;</span> {/* This represents the left arrow symbol "<" */}
         </button>
         {displayedTrips.map((trip, dayIndex) => (
           <div className="day-column" key={dayIndex}>
@@ -93,7 +92,7 @@ function MyTripsPage() {
           </div>
         ))}
         <button onClick={handleNext} className="nav-button" disabled={endIndex >= trips.length}>
-          &gt; {/* Right arrow */}
+          <span>&gt;</span> {/* This represents the right arrow symbol ">" */}
         </button>
       </div>
 
