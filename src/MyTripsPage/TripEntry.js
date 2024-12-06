@@ -14,10 +14,10 @@ function TripEntry({ time, location, rating, tags, onDelete }) {
       <div className="trip-location">{location}</div> {/* Added class name here */}
       <div className="trip-rating">{rating}</div> {/* Display rating */}
       <div className="tags">
-        {tags.map(tag => (
-          <span key={tag} className="tag">{tag}</span>
-        ))}
-      </div>
+      {(tags || []).map(tag => (
+        <span key={tag} className="tag">{tag}</span>
+      ))}
+    </div>
     </div>
   );
 }
