@@ -6,6 +6,7 @@ import rightArrow from "../rightArrow.png";
 import NavBar from "../components/NavBar";
 import LocationCard from '../components/LocationCard.js'; 
 import tourismData from '../Data/tourismData.json';
+import localData from '../Data/localData.json';
 import "../HomePage/HomePage.css";
 import SearchBar from "../components/SearchBar";
 import { useNavigate } from 'react-router-dom';
@@ -16,6 +17,7 @@ function HomePage() {
   const [currentPlan, setCurrentPlan] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null); // Track the hovered grid item
   const [searchInput, setSearchInput] = useState("");
+  const [isLocalFinds, setIsLocalFinds] = useState(false); // New state to toggle between Local Finds and Tourism
 
   const handleAddToPlanClick = (index) => {
     setCurrentPlan(index);
@@ -28,7 +30,7 @@ function HomePage() {
 
   const selectedCity = searchInput || "Chicago"; 
 
-  const filteredItems = tourismData[selectedCity] || [];
+  const filteredItems = isLocalFinds ? localData[selectedCity] || [] : tourismData[selectedCity] || [];
 
   const confirmAddToPlan = (date, fromTime, toTime, location) => {
     const newEntry = {
@@ -58,8 +60,13 @@ function HomePage() {
 
   const navigate = useNavigate();
 
-  const handleNavigate = () => {
-    navigate('/homelocalfinds');
+  const handleNavigate = (type) => {
+    if (type === "localFinds") {
+      setIsLocalFinds(true); // Switch to local finds data
+      // what do I navigate to?? i want to replace the data
+    } else {
+      setIsLocalFinds(false); // Switch back to tourism data
+    }
   };
   
 
@@ -71,13 +78,15 @@ function HomePage() {
           <span className="location-text">Chicago</span>
         </div>
         <div className="section-titles">
-          <span className="tourism-travel-text">Tourism Travel</span>
-          <span className="local-finds-text" onClick={handleNavigate}>Local Finds</span>
+        <span className={`tourism-travel-text ${isLocalFinds ? 'tourism-travel-text-local' : ''}`} onClick={() => handleNavigate("tourismTravel")} >
+          Tourism Travel </span>
+          <span className={`local-finds-text ${isLocalFinds ? 'local-finds-text-local' : ''}`} onClick={() => handleNavigate("localFinds")}>
+            Local Finds </span>
+          </div>
+          <div className="underline-bar">
+          <div className={`underline-bar-left ${isLocalFinds ? 'underline-bar-left-local' : ''}`}></div>
+          <div className={`underline-bar-right ${isLocalFinds ? 'underline-bar-right-local' : ''}`}></div>
         </div>
-        <div className="underline-bar">
-        <div className="underline-bar-left"></div>
-        <div className="underline-bar-right"></div>
-      </div>
         
         <div className="grid-container">
           <img src={leftArrow} alt="Left Arrow" className="arrow left-arrow" />

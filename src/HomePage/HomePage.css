@@ -259,3 +259,29 @@
   background-color: #e55724;
 }
 
+
+.tourism-travel-text-local {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    color: #828282;
+    margin-right: 150px;
+  }
+  
+  .local-finds-text-local {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    color: #336D74;
+  }
+  
+  .underline-bar-left-local {
+    width: 160px;
+    height: 3px;
+    background-color: #828282;
+  }
+  
+  .underline-bar-right-local {
+    width: 160px;
+    height: 3px;
+    background-color: #336D74;
+  }
+  

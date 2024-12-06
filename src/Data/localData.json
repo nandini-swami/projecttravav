@@ -1,79 +1,79 @@
 {
     "Chicago": [
       {
-        "name": "Local",
-        "description": "Navy Pier is the People's Pier, Chicago's lakefront treasure, welcoming all and offering dynamic and eclectic experiences through partnerships...",
-        "tags": ["family friendly", "music", "food", "pet friendly"],
+        "name": "The Secret Mermaid",
+        "description": "This unauthorized stone mermaid was secretly carved out of public stone before being permanently preserved. It's a hidden gem in Chicago's bustling...",
+        "tags": ["sculpture", "art", "outdoors", "pet friendly"],
         "address": "600 E Grand Ave, Chicago, IL 60611",
-        "contact": "+1 312-595-7437",
-        "website": "navypier.org",
+        "contact": "N/A",
+        "website": "https://www.atlasobscura.com/places/the-secret-mermaid-chicago-illinois",
         "rating": "★★★★☆"
       },
       {
-        "name": "Millennium Park",
-        "description": "Millennium Park is a stunning architectural and cultural hub in the heart of Chicago, featuring iconic landmarks like the Cloud Gate (The Bean), lush gardens, and outdoor performances.",
-        "tags": ["family friendly", "art", "outdoor", "photography"],
-        "address": "201 E Randolph St, Chicago, IL 60602",
-        "contact": "+1 312-742-1168",
-        "website": "millenniumpark.org",
+        "name": "The Magic Parlour",
+        "description": "A hidden gem in Chicago's theater scene, The Magic Parlour is an intimate magic show hosted by Dennis Watkins. It's a one-of-a-kind experience, offering mind-blowing illusions in a cozy, vintage-style parlor.",
+        "tags": ["theater", "magic", "intimate", "performance"],
+        "address": "5055 N Broadway, Chicago, IL 60640",
+        "contact": "773-654-1151",
+        "website": "https://www.themagicparlour.com",
         "rating": "★★★★★"
       },
       {
-        "name": "Art Institute of Chicago",
-        "description": "The Art Institute of Chicago is one of the world's premier art museums, boasting an extensive collection of artwork ranging from Impressionist masterpieces to contemporary exhibits.",
-        "tags": ["art", "culture", "history", "educational"],
-        "address": "111 S Michigan Ave, Chicago, IL 60603",
-        "contact": "+1 312-443-3600",
-        "website": "artic.edu",
-        "rating": "★★★★★"
+        "name": "The International Museum of Surgical Science",
+        "description": "This unique museum is housed in a historic mansion and offers an eye-opening look at the history of surgery, medical instruments, and more. It’s an unexpected space for anyone fascinated by the history of medicine.",
+        "tags": ["museum", "history", "surgery", "quirky"],
+        "address": "1524 N Lake Shore Dr, Chicago, IL 60610",
+        "contact": "312-642-6502",
+        "website": "https://imss.org",
+        "rating": "★★★★☆"
       },
       {
-        "name": "Willis Tower Skydeck",
-        "description": "The Willis Tower Skydeck offers breathtaking views of Chicago and beyond from its 103rd floor, featuring The Ledge, a glass balcony extending four feet outside the building.",
-        "tags": ["adventure", "photography", "family friendly", "landmark"],
-        "address": "233 S Wacker Dr, Chicago, IL 60606",
-        "contact": "+1 312-875-9696",
-        "website": "theskydeck.com",
+        "name": "The Charnel House",
+        "description": "Located in a former funeral home, The Charnel House is a performing arts venue offering a range of performances, from theater to art installations, all in an eerie, offbeat environment.",
+        "tags": ["theater", "performing arts", "unique", "history"],
+        "address": "3421 W Fullerton Ave, Chicago, IL 60647",
+        "contact": "773-251-0166",
+        "website": "https://www.thecharnelhouse.org",
         "rating": "★★★★☆"
       }
     ],
     "New York": [
-      {
-        "name": "Central Park",
-        "description": "Central Park is the green heart of New York City, offering a peaceful mixture of lakes, forests, and trails. It's a hub for outdoor activities, culture, and relaxation.",
-        "tags": ["outdoors", "picnic", "sightseeing", "family friendly"],
-        "address": "New York, NY 10024",
-        "contact": "+1 212-310-6600",
-        "website": "centralparknyc.org",
-        "rating": "★★★★★"
-      },
-      {
-        "name": "Statue of Liberty",
-        "description": "A symbol of freedom and democracy, the Statue of Liberty stands proudly on Liberty Island and offers tours, a museum, and breathtaking views of the New York City skyline.",
-        "tags": ["landmark", "history", "educational", "adventure"],
-        "address": "Liberty Island, New York, NY 10004",
-        "contact": "+1 212-363-3200",
-        "website": "nps.gov/stli",
-        "rating": "★★★★★"
-      },
-      {
-        "name": "Times Square",
-        "description": "Times Square is the vibrant heart of New York City, known for its dazzling lights, Broadway theaters, shopping, and an electrifying atmosphere.",
-        "tags": ["entertainment", "shopping", "nightlife", "photography"],
-        "address": "Manhattan, NY 10036",
-        "contact": "+1 212-768-1560",
-        "website": "timessquarenyc.org",
-        "rating": "★★★★☆"
-      },
-      {
-        "name": "The Metropolitan Museum of Art",
-        "description": "The Met is a world-renowned art museum, housing over two million works of art from ancient history to modern times, offering an immersive cultural experience.",
-        "tags": ["art", "culture", "history", "educational"],
-        "address": "1000 5th Ave, New York, NY 10028",
-        "contact": "+1 212-535-7710",
-        "website": "metmuseum.org",
-        "rating": "★★★★★"
-      }
+        {
+            "name": "The City Reliquary",
+            "description": "A quirky museum in Williamsburg, Brooklyn, The City Reliquary is a hidden gem showcasing New York City artifacts, from subway tokens to vintage Brooklyn memorabilia, all displayed in a charming, eclectic space.",
+            "tags": ["museum", "history", "quirky", "local culture"],
+            "address": "370 Metropolitan Ave, Brooklyn, NY 11211",
+            "contact": "718-782-4842",
+            "website": "http://www.cityreliquary.org",
+            "rating": "★★★★☆"
+          },
+          {
+            "name": "The Elevated Acre",
+            "description": "A hidden urban oasis tucked above the bustling streets of Lower Manhattan, The Elevated Acre is a peaceful park with incredible views, perfect for a quiet lunch or a short escape from the city’s noise.",
+            "tags": ["outdoors", "park", "hidden gem", "views"],
+            "address": "55 Water St, New York, NY 10041",
+            "contact": "N/A",
+            "website": "https://www.theelevatedacre.com",
+            "rating": "★★★★☆"
+          },
+          {
+            "name": "Mmuseumm",
+            "description": "This tiny museum, located in a former elevator shaft in Tribeca, showcases strange and curious artifacts, from ancient medical instruments to oddities of modern life. It’s a fascinating, offbeat destination for those in search of something unusual.",
+            "tags": ["museum", "oddities", "artifacts", "quirky"],
+            "address": "4 Cortlandt Alley, New York, NY 10013",
+            "contact": "N/A",
+            "website": "https://mmuseumm.com",
+            "rating": "★★★★★"
+          },
+          {
+            "name": "The Ghostbusters Firehouse",
+            "description": "Fans of the 1980s classic film will appreciate the Firehouse in Tribeca, which served as the headquarters for the Ghostbusters. While it's an active firehouse, fans can appreciate the outside and its iconic role in the movie.",
+            "tags": ["movie site", "history", "filming location", "quirky"],
+            "address": "14 N Moore St, New York, NY 10013",
+            "contact": "N/A",
+            "website": "https://www.nyc.gov",
+            "rating": "★★★★☆"
+          }
     ]
   }
   
