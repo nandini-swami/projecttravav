@@ -107,6 +107,7 @@ function HomePage() {
                 location={location}
                 index={index}
                 handleAddToPlanClick={handleAddToPlanClick}
+                isAdded={addedPlans.includes(index)}
               />
             </div>
           ))}

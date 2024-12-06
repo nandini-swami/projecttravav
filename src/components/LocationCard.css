@@ -83,3 +83,28 @@
   color: white;
 }
 
+.bookmark-icon {
+  font-size: 20px; /* Icon size */
+  color: #336D74;
+  cursor: pointer;
+  position: absolute; /* Position the icon */
+  top: 10px;
+  right: 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.bookmark-icon:hover {
+  color: #336D74;
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.bookmark-icon svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Optional: Add a smooth transition for the filled effect */
+.bookmark-icon .fa-bookmark {
+  color: #336D74; /* Filled bookmark color */
+}
+

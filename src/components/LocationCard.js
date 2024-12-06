@@ -1,9 +1,15 @@
 import React from 'react';
+import { FaBookmark, FaRegBookmark } from 'react-icons/fa';
 import '../components/LocationCard.css';
 
-function LocationCard({ location, index, handleAddToPlanClick }) {
+function LocationCard({ location, index, handleAddToPlanClick, isAdded }) {
   return (
     <div className="location-card">
+      {/* Bookmark Icon */}
+      <div className="bookmark-icon" title="Bookmark">
+        <FaRegBookmark />
+      </div>
+
       <h3 className="location-name">{location.name}</h3>
       <div className="location-rating">{location.rating}</div>
       <div className="location-tags">
@@ -14,10 +20,10 @@ function LocationCard({ location, index, handleAddToPlanClick }) {
       <p className="location-description">{location.description}</p>
       
       <button
-        className="add-to-plan-btn"
-        onClick={() => handleAddToPlanClick(index)} // Pass index to parent
+        className={`add-to-plan-btn ${isAdded ? 'added' : ''}`} // Add dynamic class
+        onClick={() => !isAdded && handleAddToPlanClick(index)} // Disable if already added
       >
-        Add to Plan
+        {isAdded ? 'Added' : 'Add to Plan'} {/* Change button text */}
       </button>
     </div>
   );
