@@ -40,8 +40,8 @@
       },
       {
         "name": "The Metropolitan Museum of Art",
-        "description": "The Met is a world-renowned art museum, housing over two million works of art from ancient history to modern times, offering an immersive cultural experience.",
-        "tags": ["art", "culture", "history", "educational"],
+        "description": "The Met is a world-renowned art museum, housing over two million works of art from ancient history to modern times.",
+        "tags": ["art", "culture", "history"],
         "address": "1000 5th Ave, New York, NY 10028",
         "contact": "+1 212-535-7710",
         "website": "metmuseum.org",

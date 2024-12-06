@@ -2,17 +2,21 @@ import React, { useState } from 'react';
 import '../components/LocationCard.css';
 
 function LocationCard({ location, index }) {
-  const [popupVisible, setPopupVisible] = useState(false); // State for popup visibility
+  const [popupVisible, setPopupVisible] = useState(false);
+  const [date, setDate] = useState('');
+  const [fromTime, setFromTime] = useState('');
+  const [toTime, setToTime] = useState('');
+  const [isAdded, setIsAdded] = useState(false); // Track if added to plan
 
   const handleAddToPlanClick = () => {
-    setPopupVisible(true); // Show the popup
+    setPopupVisible(true);
   };
 
   const closePopup = () => {
-    setPopupVisible(false); // Close the popup
+    setPopupVisible(false);
   };
 
-  const confirmAddToPlan = (date, fromTime, toTime) => {
+  const confirmAddToPlan = () => {
     const newEntry = {
       time: `${fromTime} - ${toTime}`,
       location: location.name,
@@ -35,7 +39,9 @@ function LocationCard({ location, index }) {
     }
 
     localStorage.setItem('trips', JSON.stringify(updatedTrips));
+
     setPopupVisible(false); // Close the popup
+    setIsAdded(true); // Mark as added
   };
 
   return (
@@ -49,48 +55,53 @@ function LocationCard({ location, index }) {
       </div>
       <p className="location-description">{location.description}</p>
       <button
-        className="add-to-plan-btn"
+        className={`add-to-plan-btn ${isAdded ? 'added' : ''}`}
         onClick={handleAddToPlanClick}
+        disabled={isAdded} // Disable button if already added
       >
-        Add to Plan
+        {isAdded ? 'Added' : 'Add to Plan'}
       </button>
       {popupVisible && (
-        <>
-          {/* <div className="dimmed-background"></div>  */}
-          <div className="popup-overlay">
-            <div className="popup">
-              <h3 className="popup-title">
-                Add {location.name} to Plan
-              </h3>
-              <div className="popup-body">
-                <label className="popup-label">Date:</label>
-                <input type="date" className="popup-input" />
-                <div className="time-select">
-                  <label className="popup-label">From:</label>
-                  <input type="time" className="popup-input" />
-                  <label className="popup-label">To:</label>
-                  <input type="time" className="popup-input" />
-                </div>
-              </div>
-              <div className="popup-actions">
-                <button className="popup-cancel-btn" onClick={closePopup}>
-                  Cancel
-                </button>
-                <button
-                  className="popup-confirm-btn"
-                  onClick={() => {
-                    const date = document.querySelector('input[type="date"]').value;
-                    const fromTime = document.querySelectorAll('input[type="time"]')[0].value;
-                    const toTime = document.querySelectorAll('input[type="time"]')[1].value;
-                    confirmAddToPlan(date, fromTime, toTime);
-                  }}
-                >
-                  Add
-                </button>
+        <div className="popup-overlay">
+          <div className="popup">
+            <h3 className="popup-title">
+              Add {location.name} to Plan
+            </h3>
+            <div className="popup-body">
+              <label className="popup-label">Date:</label>
+              <input
+                type="date"
+                className="popup-input"
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+              />
+              <div className="time-select">
+                <label className="popup-label">From:</label>
+                <input
+                  type="time"
+                  className="popup-input"
+                  value={fromTime}
+                  onChange={(e) => setFromTime(e.target.value)}
+                />
+                <label className="popup-label">To:</label>
+                <input
+                  type="time"
+                  className="popup-input"
+                  value={toTime}
+                  onChange={(e) => setToTime(e.target.value)}
+                />
               </div>
             </div>
+            <div className="popup-actions">
+              <button className="popup-cancel-btn" onClick={closePopup}>
+                Cancel
+              </button>
+              <button className="popup-confirm-btn" onClick={confirmAddToPlan}>
+                Add
+              </button>
+            </div>
           </div>
-        </>
+        </div>
       )}
     </div>
   );

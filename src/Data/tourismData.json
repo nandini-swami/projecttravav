@@ -11,7 +11,7 @@
       },
       {
         "name": "Millennium Park",
-        "description": "Millennium Park is a stunning architectural and cultural hub in the heart of Chicago, featuring iconic landmarks like the Cloud Gate (The Bean), lush gardens, and outdoor performances.",
+        "description": "Millennium Park is a stunning architectural and cultural hub in the heart of Chicago, featuring iconic landmarks like the Cloud Gate (The Bean).",
         "tags": ["family friendly", "art", "outdoor", "photography"],
         "address": "201 E Randolph St, Chicago, IL 60602",
         "contact": "+1 312-742-1168",
@@ -29,7 +29,7 @@
       },
       {
         "name": "Willis Tower Skydeck",
-        "description": "The Willis Tower Skydeck offers breathtaking views of Chicago and beyond from its 103rd floor, featuring The Ledge, a glass balcony extending four feet outside the building.",
+        "description": "The Willis Tower Skydeck offers breathtaking views of Chicago and beyond from its 103rd floor, featuring The Ledge, a glass balcony.",
         "tags": ["adventure", "photography", "family friendly", "landmark"],
         "address": "233 S Wacker Dr, Chicago, IL 60606",
         "contact": "+1 312-875-9696",
