@@ -49,6 +49,17 @@ function MyTripsPage() {
     if (endIndex < trips.length) setCurrentPage(currentPage + 1);
   };
 
+  // Function to handle deleting a trip entry
+  const handleDeleteEntry = (dayIndex, entryIndex) => {
+    const updatedTrips = [...trips];
+    updatedTrips[dayIndex].entries.splice(entryIndex, 1);
+    if (updatedTrips[dayIndex].entries.length === 0) {
+      updatedTrips.splice(dayIndex, 1); // Remove the day if there are no entries left
+    }
+    setTrips(updatedTrips);
+    localStorage.setItem('trips', JSON.stringify(updatedTrips)); // Update localStorage
+  };
+
   return (
     <div className="MyTripsPage">
       <NavBar />
@@ -84,6 +95,7 @@ function MyTripsPage() {
                 location={entry.location}
                 rating={entry.rating}
                 tags={entry.tags}
+                onDelete={() => handleDeleteEntry(dayIndex + startIndex, entryIndex)}
               />
             ))}
             <div className="add-trip-button">
