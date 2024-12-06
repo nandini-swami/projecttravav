@@ -134,7 +134,7 @@ font-weight: bold;
   .date-input {
     width: 100%;
     padding: 8px;
-    margin: 10px 0;
+    margin: 10px -10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
@@ -164,3 +164,17 @@ font-weight: bold;
     background-color: #add8e6;
     color: white;
   }
+
+  .nav-button {
+    font-size: 24px; /* Set the desired font size */
+    color: #828282;  /* Set the color to gray */
+    background: transparent; /* Make the button background transparent */
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor to pointer */
+  }
+  
+  .nav-button:disabled {
+    color: #d3d3d3; /* Lighter color for disabled button */
+  }
+
+  
