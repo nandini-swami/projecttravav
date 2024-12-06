@@ -1,80 +1,96 @@
 .trip-entry {
-    background-color: #f0f0f0;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 12px;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border: 1px solid #ccc; /* Light border like location-card */
+  padding: 15px; /* Increased padding for better spacing */
+  margin-bottom: 20px; /* Consistent margin between entries */
+  background-color: #fff; /* Lighter background for readability */
+  border-radius: 8px; /* Same border-radius for consistent rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  font-family: 'Noto Sans'; /* Match font-family */
+  overflow: hidden; /* Ensure proper containment of content */
+}
+
+.bookmark-indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.bookmark-icon {
+  width: 24px;
+  height: 24px;
+  fill: gray; /* Keep this consistent */
 }
 
 .trip-location {
-    font-size: 24px; /* Larger font size for location */
+  font-size: 20px; /* Slightly smaller to match location-card */
+  color: #333; /* Consistent text color */
+  font-weight: bold; /* Emphasize location */
 }
+
 .trip-time {
-    color: #F06829; /* Orange for the time */
-    font-size: 20px;
+  color: #F06829; /* Orange for time */
+  font-size: 16px; /* Slightly reduced font size */
 }
 
 .trip-rating {
-    color: #FFBB00; /* Yellow for the stars */
-    font-size: 20px;
+  color: #FFD700; /* Gold for stars */
+  font-size: 18px; /* Match location rating font size */
 }
 
 .tags {
-    display: flex;
-    gap: 5px;
-    margin-top: 5px;
-    justify-content: flex-start;
-    flex-wrap: wrap; 
-} 
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-top: 10px; /* Space above tags */
+}
 
 .tag {
-    background-color: #add8e6; 
-    border: none;
-    padding: 5px 10px;
-    margin-right: 5px;
-    color: black;
-    font-size: 14px;
-    border-radius: 15px;
+  background-color: #b2ecff; /* Match location-card tag style */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 12px; /* Match location-card tag size */
+  color: #336D74; /* Same text color */
+  padding: 5px 10px; /* Adjusted padding */
 }
 
 .date-edit-container {
-    display: flex;
-    align-items: center;  
-    justify-content: center;  
-    gap: 5px;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
-  
-  .edit-icon {
-    cursor: pointer; 
-    color: #828282; 
-  }
 
-  .mytripspage-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Aligns children on both ends */
-    padding: 0 20px; /* Adds padding on both sides */
-  }
-  
-  .mytripspage-text {
-    font-family: 'Merriweather', serif;
-    font-size: 45px;
-    font-weight: bold;
-    color: #F06829; /* Example color, adjust as needed */
-  }
-  
-  .see-all-button, .new-trip-button {
-    padding: 8px 16px;
-    margin-right: 10px; /* Adjusts spacing to the right */
-    background-color: #F06829;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .see-all-button:hover, .new-trip-button:hover {
-    background-color: #e55724;
-  }
+.edit-icon {
+  cursor: pointer;
+  color: #828282;
+}
+
+.mytripspage-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.mytripspage-text {
+  font-family: 'Merriweather', serif;
+  font-size: 45px;
+  font-weight: bold;
+  color: #F06829;
+}
+
+.see-all-button,
+.new-trip-button {
+  padding: 8px 16px;
+  margin-right: 10px;
+  background-color: #F06829;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.see-all-button:hover,
+.new-trip-button:hover {
+  background-color: #e55724;
+}
