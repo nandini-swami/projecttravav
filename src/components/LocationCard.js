@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaBookmark, FaRegBookmark } from 'react-icons/fa';
 import '../components/LocationCard.css';
 
 function LocationCard({ location, index, handleAddToPlanClick, isAdded }) {
+  const [isBookmarked, setIsBookmarked] = useState(false);
+
+  const toggleBookmark = () => {
+    setIsBookmarked((prev) => !prev);
+  };
+
   return (
     <div className="location-card">
       {/* Bookmark Icon */}
-      <div className="bookmark-icon" title="Bookmark">
-        <FaRegBookmark />
+      <div 
+        className="bookmark-icon" 
+        title="Bookmark" 
+        onClick={toggleBookmark}
+      >
+        {isBookmarked ? <FaBookmark className="filled" /> : <FaRegBookmark />}
       </div>
 
       <h3 className="location-name">{location.name}</h3>
