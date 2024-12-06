@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import '../App.css';
 import './MyTripsPage.css';
 import { FaPencilAlt } from 'react-icons/fa';
@@ -9,13 +8,20 @@ import NavBar from "../components/NavBar";
 
 function MyTripsPage() {
   const [trips, setTrips] = useState([]);
+  const [isPopupOpen, setIsPopupOpen] = useState(false); // Popup state
+  const [dateRange, setDateRange] = useState('12/6 - 12/15'); // Initial date range
+  const [tempDateRange, setTempDateRange] = useState(dateRange); // Temporary state for editing
+  const [currentPage, setCurrentPage] = useState(0); // Tracks current page index
+  const entriesPerPage = 3; // Max number of days per page
+
+
   useEffect(() => {
     // Load data from localStorage or fallback to JSON file
     const storedTrips = JSON.parse(localStorage.getItem('trips'));
     if (storedTrips) {
       setTrips(storedTrips);
     } else {
-      fetch('/data/myTripsData.json') // Adjust path to your JSON file
+      fetch('/data/myTripsData.json') 
         .then((res) => res.json())
         .then((data) => {
           setTrips(data);
@@ -23,7 +29,26 @@ function MyTripsPage() {
         });
     }
   }, []);
+  console.log(trips);
 
+    // Function to handle Save in Popup
+    const handleSaveDateRange = () => {
+      setDateRange(tempDateRange); // Update the date range
+      setIsPopupOpen(false); // Close the popup
+    };
+
+     // Pagination controls
+  const startIndex = currentPage * entriesPerPage;
+  const endIndex = startIndex + entriesPerPage;
+  const displayedTrips = trips.slice(startIndex, endIndex);
+
+  const handlePrev = () => {
+    if (currentPage > 0) setCurrentPage(currentPage - 1);
+  };
+
+  const handleNext = () => {
+    if (endIndex < trips.length) setCurrentPage(currentPage + 1);
+  };
 
   return (
     <div className="MyTripsPage">
@@ -38,12 +63,18 @@ function MyTripsPage() {
       <div className="trip-header">
         <h1 className="location-title">Chicago</h1>
         <div className="date-edit-container">
-          <p className="date-range">10/13 - 10/15</p>
-          <FaPencilAlt className="edit-icon" />
+          <p className="date-range">{dateRange}</p>
+          <FaPencilAlt
+            className="edit-icon"
+            onClick={() => setIsPopupOpen(true)} // Open the popup on click
+          />
         </div>
       </div>
       <div className="days-container">
-        {trips.map((trip, dayIndex) => (
+      <button onClick={handlePrev} className="nav-button" disabled={currentPage === 0}>
+          &lt; {/* Left arrow */}
+        </button>
+        {displayedTrips.map((trip, dayIndex) => (
           <div className="day-column" key={dayIndex}>
             <h2 className="day-title">{trip.day}</h2>
             {trip.entries.map((entry, entryIndex) => (
@@ -61,7 +92,34 @@ function MyTripsPage() {
             </div>
           </div>
         ))}
+        <button onClick={handleNext} className="nav-button" disabled={endIndex >= trips.length}>
+          &gt; {/* Right arrow */}
+        </button>
       </div>
+
+      {/* Popup */}
+      {isPopupOpen && (
+        <div className="popup-overlay">
+          <div className="popup-content">
+            <h2>Edit Date Range</h2>
+            <input
+              type="text"
+              value={tempDateRange}
+              onChange={(e) => setTempDateRange(e.target.value)} // Update temp date range
+              className="date-input"
+            />
+            <div className="popup-buttons">
+            <button onClick={() => setIsPopupOpen(false)} className="cancel-button">
+                Cancel
+              </button>
+              <button onClick={handleSaveDateRange} className="save-button">
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }

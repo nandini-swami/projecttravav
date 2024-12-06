@@ -5,42 +5,9 @@ body {
   font-family: Arial, sans-serif;
 }
 
-
 .grid-image {
-  width: 290px;
+  width: 300px;
   height: 245px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
-
-/* Add to Plan button styling */
-.add-to-plan-btn {
-  position: absolute; /* Position relative to its grid container */
-  bottom: 0.5%; /* Place the button in the bottom 20% of the grid container */
-  left: 50%; /* Center the button horizontally */
-  transform: translateX(-50%); /* Correct centering due to absolute positioning */
-  width: 240px;
-  height: 30px;
-  font-size: 16px; /* Larger font size for visibility */
-  font-family: "Noto Sans", sans-serif; /* Changed to Noto Sans */
-  color: #F06829; /* Orange text color matching screenshot */
-  background-color: white; /* White background */
-  border: 2px solid #F06829; /* Orange border */
-  border-radius: 25px; /* Pill-shaped button */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: all 0.3s ease; /* Smooth hover effect */
-  font-weight: 500; /* Medium weight for text */
-  text-align: center;
-  white-space: nowrap;
-}
-
-/* Hover effect */
-.add-to-plan-btn:hover {
-  background-color: #F06829; /* Orange background on hover */
-  color: white; /* White text on hover */
-}
-
-.add-to-plan-btn.added {
-  background-color: #F06829;
-  color: white;
-}

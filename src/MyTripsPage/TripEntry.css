@@ -21,6 +21,18 @@
   fill: gray; /* Keep this consistent */
 }
 
+.bookmark-indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.bookmark-icon {
+  width: 24px;
+  height: 24px;
+  fill: gray; /* Change to match your design */
+}
+
 .trip-location {
   font-size: 20px; /* Slightly smaller to match location-card */
   color: #333; /* Consistent text color */

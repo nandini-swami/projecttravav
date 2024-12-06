@@ -71,7 +71,7 @@
 /* Add to Plan button styling */
 .add-to-plan-btn {
   position: relative; /* Position relative to its grid container */
-  bottom: -10px; /* Place the button in the bottom 20% of the grid container */
+  bottom: 0px; /* Place the button in the bottom 20% of the grid container */
   left: 50%; /* Center the button horizontally */
   transform: translateX(-50%); /* Correct centering due to absolute positioning */
   width: 240px;
