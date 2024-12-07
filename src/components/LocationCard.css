@@ -1,4 +1,4 @@
-/* Location Card Styling */
+
 .location-card {
   position: relative;
   border: 1px solid #ccc;
@@ -7,27 +7,25 @@
   padding: 15px;
   overflow: hidden;
   margin-bottom: 20px;
-  background-color: #fff; /* Lighter background for better readability */
-  border-radius: 8px; /* Slightly larger radius for a softer look */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Slightly darker shadow for depth */
-  font-family: 'Noto Sans'; /* Consistent font usage */
+  background-color: #fff; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); 
+  font-family: 'Noto Sans'; 
 }
 
-/* Title Styling */
 .location-name {
   font-size: 20px;
   color: #333;
   margin-bottom: 5px;
 }
 
-/* Rating Styling */
 .location-rating {
   font-size: 18px;
   margin-bottom: 10px;
-  color: #FFD700; /* Gold color for stars */
+  color: #FFD700; 
 }
 
-/* Description Styling */
+
 .location-description {
   font-size: 14px;
   height: 45px;
@@ -36,12 +34,12 @@
   overflow-y: auto;
 }
 
-/* Tags Styling */
+
 .location-tags {
-  display: flex; /* Align tags in a row */
+  display: flex;
   overflow-x: auto;
   flex-wrap: nowrap; 
-  gap: 5px; /* Space between tags */
+  gap: 5px; 
   margin-bottom: 10px;
 }
 
@@ -55,41 +53,39 @@
   padding: 3px 8px;
 }
 
-/* Add to Plan Button Styling */
 .add-to-plan-btn {
   position: relative;
-  display: inline-block; /* Ensure the button aligns naturally */
+  display: inline-block;
   margin: 10px auto;
   bottom: -15%;
   font-size: 16px;
   font-family: "Noto Sans", sans-serif;
-  color: #F06829; /* Orange text color */
-  background-color: white; /* White background */
-  border: 2px solid #F06829; /* Orange border */
-  border-radius: 25px; /* Pill-shaped button */
+  color: #F06829; 
+  background-color: white;
+  border: 2px solid #F06829; 
+  border-radius: 25px; 
   cursor: pointer;
-  transition: all 0.3s ease; /* Smooth hover effect */
+  transition: all 0.3s ease; 
   font-weight: 500;
   text-align: center;
 }
 
-/* Hover Effect for Add to Plan Button */
+
 .add-to-plan-btn:hover {
-  background-color: #F06829; /* Orange background on hover */
-  color: white; /* White text on hover */
+  background-color: #F06829; 
+  color: white; 
 }
 
-/* Added State Styling */
 .add-to-plan-btn.added {
   background-color: #F06829;
   color: white;
 }
 
 .bookmark-icon {
-  font-size: 20px; /* Icon size */
+  font-size: 20px; 
   color: #336D74;
   cursor: pointer;
-  position: absolute; /* Position the icon */
+  position: absolute; 
   top: 10px;
   right: 10px;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -97,7 +93,7 @@
 
 .bookmark-icon:hover {
   color: #336D74;
-  transform: scale(1.1); /* Slight zoom on hover */
+  transform: scale(1.1); 
 }
 
 .bookmark-icon svg {
@@ -105,8 +101,7 @@
   vertical-align: middle;
 }
 
-/* Optional: Add a smooth transition for the filled effect */
 .bookmark-icon .fa-bookmark {
-  color: #336D74; /* Filled bookmark color */
+  color: #336D74; 
 }
 

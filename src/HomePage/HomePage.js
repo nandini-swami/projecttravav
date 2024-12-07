@@ -13,11 +13,11 @@ import { useNavigate } from 'react-router-dom';
 
 function HomePage() {
   const [addedPlans, setAddedPlans] = useState([]);
-  const [currentPlanIndex, setCurrentPlanIndex] = useState(null); // Track the clicked card index
+  const [currentPlanIndex, setCurrentPlanIndex] = useState(null); 
   const [searchInput, setSearchInput] = useState("");
   const [popupVisible, setPopupVisible] = useState(false);
-  const [hoveredIndex, setHoveredIndex] = useState(null); // Track the hovered grid item
-  const [isLocalFinds, setIsLocalFinds] = useState(false); // Toggle between Local Finds and Tourism
+  const [hoveredIndex, setHoveredIndex] = useState(null); 
+  const [isLocalFinds, setIsLocalFinds] = useState(false); 
 
   const selectedCity = searchInput || "Chicago"; 
   const filteredItems = isLocalFinds ? localData[selectedCity] || [] : tourismData[selectedCity] || [];
@@ -25,8 +25,8 @@ function HomePage() {
   const updatedTrips = [...storedTrips];
 
   const handleAddToPlanClick = (index) => {
-    setCurrentPlanIndex(index); // Store the index of the clicked card
-    setPopupVisible(true); // Show the popup
+    setCurrentPlanIndex(index); 
+    setPopupVisible(true); 
   };
 
   const closePopup = () => {
@@ -57,14 +57,14 @@ function HomePage() {
     }
   
     localStorage.setItem('trips', JSON.stringify(updatedTrips));
-    setAddedPlans([...addedPlans, currentPlanIndex]); // Update added plans
-    setPopupVisible(false); // Close the popup
+    setAddedPlans([...addedPlans, currentPlanIndex]); 
+    setPopupVisible(false); 
   };
 
   const navigate = useNavigate();
 
   const handleNavigate = (type) => {
-    setIsLocalFinds(type === "localFinds"); // Toggle data source
+    setIsLocalFinds(type === "localFinds"); 
   };
 
   return (

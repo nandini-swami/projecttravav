@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import '../BookmarkPage/BookmarkPage.css';
 import NavBar from "../components/NavBar";
 import LocationCard from '../components/LocationCard.js';
-import initialBookmarksData from '../Data/bookmarksData.json'; // Renamed for clarity
+import initialBookmarksData from '../Data/bookmarksData.json';
 
 function BookmarkPage() {
-  const [bookmarks, setBookmarks] = useState(initialBookmarksData); // Correctly initialize state from imported data
+  const [bookmarks, setBookmarks] = useState(initialBookmarksData); 
   const [addedPlans, setAddedPlans] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [showAddLocationForm, setShowAddLocationForm] = useState(false);
@@ -29,21 +29,20 @@ function BookmarkPage() {
   };
 
 const handleAddCustomLocation = (newLocation) => {
-  // Convert numeric rating to stars
   const ratingInStars = convertToStars(newLocation.rating);
 
   const updatedLocation = {
     ...newLocation,
-    rating: ratingInStars // Store rating as stars
+    rating: ratingInStars 
   };
 
   const updatedBookmarks = {
     ...bookmarks,
-    [cityToAdd]: [...bookmarks[cityToAdd], updatedLocation] // Add new location with star rating
+    [cityToAdd]: [...bookmarks[cityToAdd], updatedLocation] 
   };
 
   setBookmarks(updatedBookmarks);
-  setShowAddLocationForm(false); // Close form after submission
+  setShowAddLocationForm(false); 
 };
 
   return (
@@ -60,7 +59,6 @@ const handleAddCustomLocation = (newLocation) => {
           </div>
       </div>
 
-      {/* Add Custom Location Form */}
       {showAddLocationForm && (
         <div className="add-custom-location">
           <h2>Add Custom Location</h2>
@@ -70,7 +68,7 @@ const handleAddCustomLocation = (newLocation) => {
           const newLocation = {
             name: formData.get('name'),
             description: formData.get('description'),
-            tags: formData.get('tags') ? formData.get('tags').split(',') : [], // Safely handle tags
+            tags: formData.get('tags') ? formData.get('tags').split(',') : [], 
             address: formData.get('address'),
             contact: formData.get('contact'),
             website: formData.get('website'),
@@ -95,7 +93,6 @@ const handleAddCustomLocation = (newLocation) => {
         </div>
       )}
 
-      {/* Chicago Section */}
       <div className="bookmark-city-section">
         <h2 className="bookmark-city-title">Chicago</h2>
         <div className="grid-container">
@@ -117,7 +114,6 @@ const handleAddCustomLocation = (newLocation) => {
         </div>
       </div>
 
-      {/* New York Section */}
       <div className="bookmark-city-section">
         <h2 className="bookmark-city-title">New York</h2>
         <div className="grid-container">

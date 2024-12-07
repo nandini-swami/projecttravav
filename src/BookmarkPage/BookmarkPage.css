@@ -1,14 +1,13 @@
-/* Title Section */
 .title-button-container {
   display: flex;
-  justify-content: space-between;  /* Pushes the title to the left and the button to the right */
-  align-items: center;  /* Aligns items vertically in the middle */
-  padding: 10px 20px;  /* Adds some padding around the elements */
+  justify-content: space-between; 
+  align-items: center;  
+  padding: 10px 20px;  
 }
 
 .bookmark-title {
-  padding-left: 30px; /* Align the title with the logo */
-  margin-top: 20px; /* Adjust the spacing between the top bar and the title */
+  padding-left: 30px; 
+  margin-top: 20px; 
 }
 
 .bookmark-page-text {
@@ -18,9 +17,8 @@
   font-weight: bold;
 }
 
-/* City Sections */
 .bookmark-city-section {
-  margin: 30px 20px; /* Add spacing around each city section */
+  margin: 30px 20px; 
 }
 
 .bookmark-city-title {
@@ -29,26 +27,24 @@
   color: #333;
   margin-bottom: 20px;
 }
-/* Grid Container for Location Cards */
+
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
-  gap: 0px; /* Space between grid items */
-  justify-items: start; /* Center cards horizontally */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 0px; 
+  justify-items: start; 
   width: auto;
 }
 
-/* Individual Grid Items */
 .grid-item {
-  width: 250px; /* Adjust card width to avoid full-page sizing */
-  transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+  width: 250px; 
+  transition: transform 0.2s ease-in-out; 
 }
 
 .grid-item.hover {
-  transform: scale(1.05); /* Slightly enlarge card on hover */
+  transform: scale(1.05); 
 }
 
-/* Location Card Styling */
 .location-card {
   background-color: #fff;
   border-radius: 8px;
@@ -57,49 +53,49 @@
 }
 
 .add-custom-location {
-  background-color: #f8f9fa; /* Light gray background */
+  background-color: #f8f9fa; 
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px auto; /* Center the form horizontally */
-  max-width: 400px; /* Maximum width of the form */
+  margin: 20px auto; 
+  max-width: 400px; 
 }
 
 .add-custom-location input[type="text"],
 .add-custom-location input[type="number"],
 .add-custom-location select {
-  width: 100%; /* Full width of the container */
+  width: 100%; 
   padding: 8px;
   margin-top: 6px;
   margin-bottom: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  display: block; /* Ensures each input takes its own line */
+  display: block; 
 }
 
 .add-custom-location input[type="text"]:focus,
 .add-custom-location input[type="number"]:focus,
 .add-custom-location select:focus {
-  border-color: #6658d3; /* Focus state with a different border color */
+  border-color: #6658d3; 
   outline: none;
 }
 
 .add-location-button {
-  background-color: #336D74; /* Soft pink color */
+  background-color: #336D74; 
   color: white;
-  padding: 10px 20px; /* Comfortable padding */
-  font-size: 16px; /* Legible text size */
+  padding: 10px 20px; 
+  font-size: 16px; 
   border: none;
-  border-radius: 25px; /* Fully rounded corners */
+  border-radius: 25px; 
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
-  outline: none; /* Remove default focus outline */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+  outline: none; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .add-location-button:hover {
-  background-color: #3b7177; /* Darker shade on hover */
-  transform: scale(1.05); /* Slightly larger on hover */
+  background-color: #3b7177; 
+  transform: scale(1.05); 
 }
 
 

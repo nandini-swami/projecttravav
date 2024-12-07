@@ -11,7 +11,6 @@ function LocationCard({ location, index, handleAddToPlanClick, isAdded }) {
 
   return (
     <div className="location-card">
-      {/* Bookmark Icon */}
       <div 
         className="bookmark-icon" 
         title="Bookmark" 
@@ -30,10 +29,10 @@ function LocationCard({ location, index, handleAddToPlanClick, isAdded }) {
       <p className="location-description">{location.description}</p>
       
       <button
-        className={`add-to-plan-btn ${isAdded ? 'added' : ''}`} // Add dynamic class
-        onClick={() => !isAdded && handleAddToPlanClick(index)} // Disable if already added
+        className={`add-to-plan-btn ${isAdded ? 'added' : ''}`} 
+        onClick={() => !isAdded && handleAddToPlanClick(index)} 
       >
-        {isAdded ? 'Added' : 'Add to Plan'} {/* Change button text */}
+        {isAdded ? 'Added' : 'Add to Plan'} 
       </button>
     </div>
   );

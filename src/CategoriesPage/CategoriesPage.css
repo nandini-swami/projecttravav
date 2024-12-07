@@ -1,5 +1,5 @@
 body {
-  background-color: white; /* Set the background color to white */
+  background-color: white;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -9,19 +9,18 @@ body {
 .top-bar {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Right align the items */
+  justify-content: flex-end; 
   width: 100%;
   height: 60px;
-  background-color: white; /* Set the background color to white */
+  background-color: white;
   padding: 0 20px;
-  gap: 10px; /* Adjust the spacing between items */
+  gap: 10px; 
   text-decoration: none;
 }
 
 .logo {
   width: 40px;
   height: 50px;
-   /* Adjust the spacing between logo and title */
 }
 
 .title {
@@ -29,7 +28,7 @@ body {
   padding-top: 10px;
   padding-left: 10px;
   font-size: 40px;
-  margin-right: auto; /* Push the title to the left */
+  margin-right: auto; 
   text-decoration: none;
 }
 
@@ -39,8 +38,8 @@ body {
   justify-content: center;
   width: 116px;
   height: 41px;
-  border-radius: 20px; /* Rounded corners */
-  margin-right: -10px; /* Move the bubbles to the left */
+  border-radius: 20px; 
+  margin-right: -10px; 
   text-decoration: none;
 }
 
@@ -75,17 +74,17 @@ body {
 }
 
 .icon {
-  width: 40px; /* Adjust the size of the icon */
-  height: 40px; /* Adjust the size of the icon */
-  margin-right: -30px; /* Move the icons to the left */
+  width: 40px; 
+  height: 40px; 
+  margin-right: -30px; 
 }
 
 .settings-icon {
-  margin-right: -1px; /* Move the settings icon closer to the My Trips button */
+  margin-right: -1px; 
 }
 
 .profile-icon {
-  margin-right: 60px; /* Move the profile icon closer to the settings icon */
+  margin-right: 60px; 
 }
 
 .search-bar {
@@ -95,15 +94,15 @@ body {
   height: 46px;
   background-color: white;
   border: 2px solid #336D74;
-  border-radius: 23px; /* Rounded corners */
-  margin: 10px auto; /* Move the search bar up by reducing the top margin */
+  border-radius: 23px; 
+  margin: 10px auto; 
   margin-left: 30px;
-  padding-left: 20px; /* Add left padding */
+  padding-left: 20px; 
 }
 
 .search-icon {
-  width: 24px; /* Adjust the size of the search icon */
-  height: 24px; /* Adjust the size of the search icon */
+  width: 24px; 
+  height: 24px; 
   margin-right: 10px;
 }
 
@@ -116,16 +115,16 @@ body {
 .tags {
   display: flex;
   align-items: center;
-  margin-top: 10px; /* Adjust the spacing between the search bar and tags */
-  gap: 10px; /* Space between tags */
-  padding-left: 30px; /* Align the tags with the search bar */
+  margin-top: 10px; 
+  gap: 10px; 
+  padding-left: 30px; 
 }
 
 .tag {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 13.5px; /* Rounded corners */
+  border-radius: 13.5px; 
   border: 1px solid #828282;
   background-color: white;
   padding: 0 10px;
@@ -163,8 +162,8 @@ body {
 }
 
 .location {
-  padding-left: 30px; /* Align the location text with the search bar */
-  margin-top: 20px; /* Adjust the spacing between the tags and location text */
+  padding-left: 30px; 
+  margin-top: 20px; 
 }
 
 .location-text {
@@ -177,7 +176,7 @@ body {
 .section-titles {
   display: flex;
   align-items: center;
-  padding-left: 595px; /* Align the section titles with the specified position */
+  padding-left: 595px; 
   margin-top: -60px;
 }
 
@@ -185,7 +184,7 @@ body {
   font-family: 'Noto Sans', sans-serif;
   font-size: 20px;
   color: #336D74;
-  margin-right: 150px; /* Adjust the spacing between the two texts */
+  margin-right: 150px; 
 }
 
 .local-finds-text {
@@ -198,7 +197,7 @@ body {
   font-family: 'Noto Sans', sans-serif;
   font-size: 20px;
   color: #828282;
-  margin-right: 150px; /* Adjust the spacing between the two texts */
+  margin-right: 150px; 
 }
 
 .local-finds-text-local {
@@ -211,8 +210,8 @@ body {
 .underline-bar {
   display: flex;
   align-items: center;
-  margin-top: 5px; /* Adjust the spacing between the texts and the underline bar */
-  padding-left: 585px; /* Align the underline bar with the specified position */
+  margin-top: 5px; 
+  padding-left: 585px; 
 }
 
 .underline-bar-left {
@@ -244,7 +243,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 20px; /* Adjust the spacing between the underline bar and the grid container */
+  margin-top: 20px; 
 }
 
 .image-grid {
@@ -252,8 +251,8 @@ body {
   grid-template-columns: repeat(2, 290px);
   grid-template-rows: repeat(2, 245px);
   gap: 20px;
-  justify-content: start; /* Align the grid to the start (left) */
-  padding-left: 430px; /* Align the grid with the "Tourism Travel" text */
+  justify-content: start; 
+  padding-left: 430px; 
 }
 
 .grid-image {
@@ -264,18 +263,18 @@ body {
 
 .arrow {
   position: absolute;
-  top: 50%; /* Position the arrows halfway down the grid */
+  top: 50%; 
   transform: translateY(-50%);
   cursor: pointer;
 }
 
 .left-arrow {
-  left: 580px; /* Adjust the position of the left arrow */
+  left: 580px; 
   height: 30px;
 }
 
 .right-arrow {
-  right: 20px; /* Adjust the position of the right arrow */
+  right: 20px; 
   height: 30px;
   padding-right: 130px;
 }
@@ -283,18 +282,18 @@ body {
 .loading-bar-container {
   display: flex;
   justify-content: center;
-  margin-top: 10px; /* Adjust the spacing between the image grid and the loading bar */
-  padding-left: 430px; /* Align the loading bar with the "Tourism Travel" text */
+  margin-top: 10px; 
+  padding-left: 430px; 
 }
 
 .loading-bar {
-  width: 60px; /* Adjust the size of the loading bar */
-  height: 13px; /* Adjust the size of the loading bar */
+  width: 60px; 
+  height: 13px; 
 }
 
 .map-container {
   position: absolute;
-  top: 250px; /* Move the map image up */
+  top: 250px; 
   left: 37px;
 }
 
@@ -304,11 +303,6 @@ body {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
 }
 
-
-/*(above is homepage styling/nav bar styling)
-
-BOOKMARK PAGE STYLING:
-*/
 
 
 .bookmark-title {
@@ -362,10 +356,6 @@ BOOKMARK PAGE STYLING:
   margin-left: 20px; /* Space between the search bar and the button */
   cursor: pointer;
 }
-
-/*
-My Trips PAGE STYLING:
-*/
 
 .mytripspage-title {
   padding-left: 30px; /* Align the title with the logo */

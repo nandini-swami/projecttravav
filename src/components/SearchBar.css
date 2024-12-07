@@ -1,6 +1,6 @@
 .search-icon {
-    width: 24px; /* Adjust the size of the search icon */
-    height: 24px; /* Adjust the size of the search icon */
+    width: 24px; 
+    height: 24px; 
     margin-right: 10px;
 }
 
@@ -10,20 +10,19 @@
     color: #828282;
 }
 
-/* Tags Styling */
 .tags {
     display: flex;
     align-items: center;
-    margin-top: 10px; /* Adjust the spacing between the search bar and tags */
-    gap: 10px; /* Space between tags */
-    padding-left: 30px; /* Align the tags with the search bar */
+    margin-top: 10px; 
+    gap: 10px; 
+    padding-left: 30px; 
 }
 
 .tag {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 13.5px; /* Rounded corners */
+    border-radius: 13.5px;
     border: 1px solid #336D74;
     background-color: white;
     padding: 0 10px;
@@ -45,7 +44,6 @@
     color: #336D74;
 }
 
-/* Search bar hover effect */
 .search-bar {
     display: flex;
     align-items: center;
@@ -57,21 +55,19 @@
     margin: 10px auto;
     margin-left: 30px;
     padding-left: 20px;
-    cursor: pointer; /* Indicate clickable area */
+    cursor: pointer;
 }
 
-/* Dimmed background */
 .dimmed-background {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-    z-index: 99; /* Below popup but above other content */
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 99; 
 }
 
-/* Popup container */
 .popup {
     position: fixed;
     top: 50%;
@@ -82,11 +78,10 @@
     border-radius: 5px;
     padding: 20px;
     width: 300px;
-    z-index: 100; /* Above dimmed background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for better visibility */
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-/* Popup options */
 .popup-options {
     display: flex;
     flex-direction: column;
