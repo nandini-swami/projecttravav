@@ -1,12 +1,12 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import "../components/NavBar.css"; // Ensure this CSS file includes the updated styles
-import logo from "../logo.png"; // Adjust the import path if necessary
+import "../components/NavBar.css"; 
+import logo from "../logo.png"; 
 import settingsIcon from "../settingsIcon.png"; 
 import profileIcon from "../profileIcon.png";
 
 function NavBar() {
-  const location = useLocation(); // Get the current page's location
+  const location = useLocation(); 
 
   // Define the navigation links
   const navLinks = [
