@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import "../components/SearchBar.css";
 
 function SearchBar({ searchInput, setSearchInput }) {
-  const [isClicked, setIsClicked] = useState(false); // For popup visibility
-  const [typedLocation, setTypedLocation] = useState(""); // For user-typed location
-  const [tags, setTags] = useState(["family friendly", "pet friendly", "music", "food"]); // For currently stored tags
-  const validOptions = ["New York", "Chicago"]; // Predefined valid options
+  const [isClicked, setIsClicked] = useState(false); 
+  const [typedLocation, setTypedLocation] = useState(""); 
+  const [tags, setTags] = useState(["family friendly", "pet friendly", "music", "food"]); 
+  const validOptions = ["New York", "Chicago"]; 
 
 
   useEffect(() => {
