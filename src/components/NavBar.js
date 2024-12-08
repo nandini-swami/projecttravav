@@ -8,7 +8,6 @@ import profileIcon from "../profileIcon.png";
 function NavBar() {
   const location = useLocation(); 
 
-  // Define the navigation links
   const navLinks = [
     { path: "/", label: "Home" },
     { path: "/categories", label: "Categories" },
@@ -75,7 +74,7 @@ function NavBar() {
         style={{
           width: "40px",
           height: "40px",
-          marginRight: "-1px", // Move settings icon closer
+          marginRight: "-1px", 
         }}
       />
       <img
@@ -85,7 +84,7 @@ function NavBar() {
         style={{
           width: "40px",
           height: "40px",
-          marginRight: "60px", // Move profile icon closer
+          marginRight: "60px", 
         }}
       />
     </div>
