@@ -1,5 +1,5 @@
 import React from 'react';
-import './TripEntry.css'; // Correct path to the CSS file
+import './TripEntry.css'; 
 import { FaTimes } from 'react-icons/fa';
 
 
