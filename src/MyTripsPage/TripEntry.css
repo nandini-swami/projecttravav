@@ -1,13 +1,24 @@
 .trip-entry {
-  position: relative; /* Add this line */
-  border: 1px solid #ccc; /* Light border like location-card */
-  padding: 15px; /* Increased padding for better spacing */
-  margin-bottom: 20px; /* Consistent margin between entries */
-  background-color: #fff; /* Lighter background for readability */
-  border-radius: 8px; /* Same border-radius for consistent rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
-  font-family: 'Noto Sans'; /* Match font-family */
-  overflow: hidden; /* Ensure proper containment of content */
+  position: relative; 
+  border: 1px solid #ccc; 
+  padding: 15px; 
+  margin-bottom: 20px; 
+  background-color: #fff; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); 
+  font-family: 'Noto Sans'; 
+  overflow: hidden; 
+
+.bookmark-indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.bookmark-icon {
+  width: 24px;
+  height: 24px;
+  fill: gray; 
 }
 
 .bookmark-indicator {
@@ -19,50 +30,38 @@
 .bookmark-icon {
   width: 24px;
   height: 24px;
-  fill: gray; /* Keep this consistent */
-}
-
-.bookmark-indicator {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-.bookmark-icon {
-  width: 24px;
-  height: 24px;
-  fill: gray; /* Change to match your design */
+  fill: gray;
 }
 
 .trip-location {
-  font-size: 20px; /* Slightly smaller to match location-card */
-  color: #333; /* Consistent text color */
-  font-weight: bold; /* Emphasize location */
+  font-size: 20px; 
+  color: #333;
+  font-weight: bold;
 }
 
 .trip-time {
-  color: #F06829; /* Orange for time */
-  font-size: 16px; /* Slightly reduced font size */
+  color: #F06829;
+  font-size: 16px; 
 }
 
 .trip-rating {
-  color: #FFD700; /* Gold for stars */
-  font-size: 18px; /* Match location rating font size */
+  color: #FFD700; 
+  font-size: 18px; 
 }
 
 .tags {
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
-  margin-top: 10px; /* Space above tags */
+  margin-top: 10px;
 }
 
 .tag {
-  background-color: #b2ecff; /* Match location-card tag style */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 12px; /* Match location-card tag size */
-  color: #336D74; /* Same text color */
-  padding: 5px 10px; /* Adjusted padding */
+  background-color: #b2ecff; 
+  border-radius: 10px; 
+  font-size: 12px;
+  color: #336D74;
+  padding: 5px 10px;
 }
 
 .date-edit-container {
