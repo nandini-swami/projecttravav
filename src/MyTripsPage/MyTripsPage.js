@@ -8,32 +8,31 @@ import NavBar from "../components/NavBar";
 
 function MyTripsPage() {
   const [trips, setTrips] = useState([]);
-  const [isPopupOpen, setIsPopupOpen] = useState(false); // Popup state
-  const [dateRange, setDateRange] = useState('12/6 - 12/15'); // Initial date range
-  const [tempDateRange, setTempDateRange] = useState(dateRange); // Temporary state for editing
-  const [currentPage, setCurrentPage] = useState(0); // Tracks current page index
-  const entriesPerPage = 3; // Max number of days per page
-
+  const [isPopupOpen, setIsPopupOpen] = useState(false); 
+  const [dateRange, setDateRange] = useState('12/6 - 12/15'); 
+  const [tempDateRange, setTempDateRange] = useState(dateRange); 
+  const [currentPage, setCurrentPage] = useState(0); 
+  const entriesPerPage = 3; 
 
   useEffect(() => {
-    // Load data from localStorage or fallback to JSON file
+   
     const storedTrips = JSON.parse(localStorage.getItem('trips'));
     if (storedTrips) {
       setTrips(storedTrips);
     } else {
-      fetch('/data/myTripsData.json') // Adjust path to your JSON file
+      fetch('/data/myTripsData.json') 
         .then((res) => res.json())
         .then((data) => {
           setTrips(data);
-          localStorage.setItem('trips', JSON.stringify(data)); // Initialize localStorage
+          localStorage.setItem('trips', JSON.stringify(data)); 
         });
     }
   }, []);
 
-    // Function to handle Save in Popup
+   
     const handleSaveDateRange = () => {
-      setDateRange(tempDateRange); // Update the date range
-      setIsPopupOpen(false); // Close the popup
+      setDateRange(tempDateRange); 
+      setIsPopupOpen(false); 
     };
 
      // Pagination controls
@@ -54,10 +53,10 @@ function MyTripsPage() {
     const updatedTrips = [...trips];
     updatedTrips[dayIndex].entries.splice(entryIndex, 1);
     if (updatedTrips[dayIndex].entries.length === 0) {
-      updatedTrips.splice(dayIndex, 1); // Remove the day if there are no entries left
+      updatedTrips.splice(dayIndex, 1); 
     }
     setTrips(updatedTrips);
-    localStorage.setItem('trips', JSON.stringify(updatedTrips)); // Update localStorage
+    localStorage.setItem('trips', JSON.stringify(updatedTrips)); 
   };
 
   return (
@@ -76,13 +75,13 @@ function MyTripsPage() {
           <p className="date-range">{dateRange}</p>
           <FaPencilAlt
             className="edit-icon"
-            onClick={() => setIsPopupOpen(true)} // Open the popup on click
+            onClick={() => setIsPopupOpen(true)} 
           />
         </div>
       </div>
       <div className="days-container">
       <button onClick={handlePrev} className="nav-button" disabled={currentPage === 0}>
-          <span>&lt;</span> {/* This represents the left arrow symbol "<" */}
+          <span>&lt;</span> {}
         </button>
         {displayedTrips.map((trip, dayIndex) => (
           <div className="day-column" key={dayIndex}>
@@ -104,7 +103,7 @@ function MyTripsPage() {
           </div>
         ))}
         <button onClick={handleNext} className="nav-button" disabled={endIndex >= trips.length}>
-          <span>&gt;</span> {/* This represents the right arrow symbol ">" */}
+          <span>&gt;</span> {}
         </button>
       </div>
 
@@ -116,7 +115,7 @@ function MyTripsPage() {
             <input
               type="text"
               value={tempDateRange}
-              onChange={(e) => setTempDateRange(e.target.value)} // Update temp date range
+              onChange={(e) => setTempDateRange(e.target.value)} 
               className="date-input"
             />
             <div className="popup-buttons">
