@@ -7,7 +7,7 @@ function SearchBar({ searchInput, setSearchInput }) {
   const [tags, setTags] = useState(["family friendly", "pet friendly", "music", "food"]); // For currently stored tags
   const validOptions = ["New York", "Chicago"]; // Predefined valid options
 
-  // Close popup when clicking outside of it
+
   useEffect(() => {
     const handleOutsideClick = (event) => {
       if (!event.target.closest(".search-bar") && !event.target.closest(".popup")) {
@@ -23,9 +23,9 @@ function SearchBar({ searchInput, setSearchInput }) {
 
   const handleKeyPress = (event) => {
     if (event.key === "Enter" && typedLocation.trim() !== "") {
-      setSearchInput(typedLocation); // Update the global search input state
-      setTypedLocation(""); // Clear the typed location
-      setIsClicked(false); // Close the popup
+      setSearchInput(typedLocation); 
+      setTypedLocation(""); 
+      setIsClicked(false); 
     }
   };
 
@@ -35,8 +35,8 @@ function SearchBar({ searchInput, setSearchInput }) {
       <div
         className="search-bar"
         onClick={(e) => {
-          e.stopPropagation(); // Prevent click event propagation
-          setIsClicked(true); // Show popup
+          e.stopPropagation(); 
+          setIsClicked(true); 
         }}
       >
         <span className="search-text">
@@ -47,7 +47,7 @@ function SearchBar({ searchInput, setSearchInput }) {
       {/* Popup and dimmed background */}
       {isClicked && (
         <>
-          <div className="dimmed-background"></div> {/* Dimmed background */}
+          <div className="dimmed-background"></div> {}
           <div className="popup">
             <div className="popup-input">
               <input
@@ -65,8 +65,8 @@ function SearchBar({ searchInput, setSearchInput }) {
                   key={option}
                   className="popup-option"
                   onClick={() => {
-                    setSearchInput(option); // Update the global search input state
-                    setIsClicked(false); // Close the popup
+                    setSearchInput(option); 
+                    setIsClicked(false); 
                   }}
                 >
                   {option}
