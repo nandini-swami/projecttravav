@@ -1,9 +1,9 @@
 
 import './App.css';
-import HomePage from './HomePage/HomePage'; // Import HomePage
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; // Import routing components
-import BookmarkPage from './BookmarkPage/BookmarkPage'; // Assuming you have a BookmarkPage component
-import MyTripsPage from './MyTripsPage/MyTripsPage'; // Assuming you have a MyTripsPage component
+import HomePage from './HomePage/HomePage'; 
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; 
+import BookmarkPage from './BookmarkPage/BookmarkPage'; 
+import MyTripsPage from './MyTripsPage/MyTripsPage'; 
 import CategoriesPage from './CategoriesPage/CategoriesPage';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     <Router>
     
 
-{/* Define Routes */}
+
 
     
       <Routes>
