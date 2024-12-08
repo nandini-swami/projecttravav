@@ -4,8 +4,8 @@
 }
 
 .mytripspage-title {
-    padding-left: 30px; /* Align the title with the logo */
-    margin-top: 20px; /* Adjust the spacing between the top bar and the title */
+    padding-left: 30px; 
+    margin-top: 20px; 
 }
   
 .mytripspage-text {
@@ -64,11 +64,11 @@ font-weight: bold;
 
 .trip-rating {
     margin-top: 5px;
-    color: #FFBB00; /* Yellow color for the stars */
+    color: #FFBB00; 
 }
 
 .trip-time {
-    color: #F06829; /* Orange color for the time */
+    color: #F06829; 
 }
 
 .see-all-button, .new-trip-button {
@@ -103,7 +103,7 @@ font-weight: bold;
   }
   
   .fa-plus-circle {
-    cursor: pointer; /* Makes the icon clickable */
+    cursor: pointer; 
   }
 
   /* Popup Overlay */
@@ -166,15 +166,15 @@ font-weight: bold;
   }
 
   .nav-button {
-    font-size: 24px; /* Set the desired font size */
-    color: #828282;  /* Set the color to gray */
-    background: transparent; /* Make the button background transparent */
-    border: none; /* Remove border */
-    cursor: pointer; /* Change cursor to pointer */
+    font-size: 24px; 
+    color: #828282;  
+    background: transparent; 
+    border: none; 
+    cursor: pointer; 
   }
   
   .nav-button:disabled {
-    color: #d3d3d3; /* Lighter color for disabled button */
+    color: #d3d3d3; 
   }
 
   
